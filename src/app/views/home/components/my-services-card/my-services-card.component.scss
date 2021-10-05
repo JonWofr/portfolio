@@ -1,0 +1,33 @@
+@import "abstracts/variables";
+
+div.card {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem 0 0 1rem;
+    border-left: 1px solid $accent-color;
+    border-top: 1px solid $accent-color;
+  }
+
+  &::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 1rem 1rem 0;
+    border-right: 1px solid $accent-color;
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+img.card-image {
+  border: 3px solid $accent-color;
+}

@@ -1,0 +1,20 @@
+@import "abstracts/variables";
+
+h3.card-heading {
+  color: $accent-color;
+}
+
+div.additional-information-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+p.employer-and-jobtype {
+  font-family: $secondary-font-bold;
+}
+
+p.duration {
+  font-family: $secondary-font-light;
+}

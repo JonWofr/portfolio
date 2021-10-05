@@ -1,0 +1,73 @@
+@import "abstracts/variables.scss";
+
+div.background-container {
+  height: 75vh;
+  background-image: url("/assets/images/laptop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  div.overlay {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  div.introduction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
+
+    img {
+      width: 150px;
+      height: 150px;
+      box-sizing: content-box;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 10px solid rgba($color: #ffffff, $alpha: 0.1);
+    }
+
+    div.text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1.5rem;
+
+      h1 {
+        color: $light-font-color;
+      }
+
+      div.subtitle-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        p {
+          color: $light-font-color;
+          font-size: 1.125rem;
+          line-height: 1.25;
+
+          span.typed-word {
+            font-family: $secondary-font-bold;
+            color: inherit;
+          }
+        }
+
+        div.cursor {
+          width: 1px;
+          height: calc(1.125rem * 1.25);
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: white;
+        }
+      }
+    }
+  }
+}

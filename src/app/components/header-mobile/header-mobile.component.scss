@@ -1,0 +1,103 @@
+@import "abstracts/variables";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition-property: border-bottom-color, box-shadow;
+  transition-duration: 0.375s;
+  transition-timing-function: ease-in-out;
+}
+
+header.transparent {
+  border-bottom: 1px solid #555;
+}
+
+header.white {
+  border-bottom: 1px solid $light-font-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+div.top-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  transition: background-color 0.375s ease-in-out;
+
+  p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    transition: color 0.375s ease-in-out;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    svg {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      transition: fill 0.375s ease-in-out;
+    }
+  }
+}
+
+div.top-row.white {
+  background-color: $light-font-color;
+
+  p {
+    color: $secondary-font-color;
+  }
+
+  svg {
+    fill: $secondary-font-color;
+  }
+}
+
+div.top-row.transparent {
+  background-color: transparent;
+
+  p {
+    color: $light-font-color;
+  }
+
+  svg {
+    fill: $light-font-color;
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-font-color;
+  transition: height 0.25s ease-in-out;
+  overflow: hidden;
+
+  a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    text-transform: uppercase;
+    font-family: $secondary-font-regular;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  li:first-child a {
+    padding-top: 1.5rem;
+  }
+
+  li:last-child a {
+    padding-bottom: 1.5rem;
+  }
+}
+
+ul.collapsed {
+  height: 0;
+}
+
+ul.expanded {
+  // Height has to be set manually. Height auto can't be animated.
+  height: calc(5 * 1.5rem + 6 * 1.5rem);
+}

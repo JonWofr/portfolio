@@ -1,0 +1,9 @@
+<section class="section container">
+  <h2 class="section-heading">My services</h2>
+  <div class="cards-container">
+    <app-my-services-card
+      *ngFor="let myService of myServices"
+      [myService]="myService"
+    ></app-my-services-card>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+p.section-paragraph {
+  margin-bottom: 2.5rem;
+}
+
+div.projects-container {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin: 2rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
