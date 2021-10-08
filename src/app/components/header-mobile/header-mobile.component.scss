@@ -16,8 +16,8 @@ header.transparent {
 }
 
 header.white {
-  border-bottom: 1px solid $light-font-color;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid $primary-font-color-light;
+  box-shadow: $default-box-shadow;
 }
 
 div.top-row {
@@ -45,14 +45,14 @@ div.top-row {
 }
 
 div.top-row.white {
-  background-color: $light-font-color;
+  background-color: $primary-font-color-light;
 
   p {
-    color: $secondary-font-color;
+    color: $secondary-font-color-dark;
   }
 
   svg {
-    fill: $secondary-font-color;
+    fill: $secondary-font-color-dark;
   }
 }
 
@@ -60,18 +60,18 @@ div.top-row.transparent {
   background-color: transparent;
 
   p {
-    color: $light-font-color;
+    color: $primary-font-color-light;
   }
 
   svg {
-    fill: $light-font-color;
+    fill: $primary-font-color-light;
   }
 }
 
 ul {
   display: flex;
   flex-direction: column;
-  background-color: $light-font-color;
+  background-color: $primary-font-color-light;
   transition: height 0.25s ease-in-out;
   overflow: hidden;
 

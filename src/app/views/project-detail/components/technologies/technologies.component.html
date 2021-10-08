@@ -1,0 +1,18 @@
+<section class="section container">
+  <h2 class="section-heading">Technologies</h2>
+  <div class="technologies-container">
+    <div
+      *ngFor="let technology of technologies"
+      class="technology-container"
+      [style.background]="
+        'linear-gradient(180deg, ' +
+        technology.accentColor +
+        '77, ' +
+        technology.accentColor +
+        '99)'
+      "
+    >
+      <img [src]="technology.iconUrl" alt="" />
+    </div>
+  </div>
+</section>

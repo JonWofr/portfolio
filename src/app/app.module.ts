@@ -15,6 +15,11 @@ import { ProjectsComponent } from './views/home/components/projects/projects.com
 import { ResumeComponent } from './views/home/components/resume/resume.component';
 import { ResumeCardComponent } from './views/home/components/resume-card/resume-card.component';
 import { ProjectComponent } from './views/home/components/project/project.component';
+import { ProjectDetailComponent } from './views/project-detail/project-detail.component';
+import { ProblemSolutionComponent } from './views/project-detail/components/problem-solution/problem-solution.component';
+import { OverviewComponent } from './views/project-detail/components/overview/overview.component';
+import { TechnologiesComponent } from './views/project-detail/components/technologies/technologies.component';
+import { ExecutionComponent } from './views/project-detail/components/execution/execution.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,11 @@ import { ProjectComponent } from './views/home/components/project/project.compon
     ResumeComponent,
     ResumeCardComponent,
     ProjectComponent,
+    ProjectDetailComponent,
+    ProblemSolutionComponent,
+    OverviewComponent,
+    TechnologiesComponent,
+    ExecutionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

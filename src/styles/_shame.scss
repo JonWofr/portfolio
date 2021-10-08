@@ -1,5 +1,8 @@
-
-
-
-
-
+p.project-type {
+  color: $accent-color;
+  font-size: 0.75rem;
+  letter-spacing: calc(3 / 12 * 1em);
+  text-transform: uppercase;
+  font-family: $secondary-font-bold;
+  margin-bottom: 0.125rem;
+}

@@ -1,0 +1,46 @@
+<header>
+  <nav>
+    <button (click)="onClickCloseButton()">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 64 64"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve"
+        xmlns:serif="http://www.serif.com/"
+        style="
+          fill-rule: evenodd;
+          clip-rule: evenodd;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-miterlimit: 1.5;
+        "
+      >
+        <g
+          transform="matrix(-1.00955,0.00955464,-0.00955464,1.00955,66.1439,1.16413)"
+        >
+          <path
+            d="M6.328,3.02L60.742,57.434"
+            style="fill: none; stroke: rgb(48, 48, 48); stroke-width: 7.85px"
+          />
+        </g>
+        <g
+          transform="matrix(1.00955,0.00955464,0.00955464,1.00955,-2.14385,1.16413)"
+        >
+          <path
+            d="M6.328,3.02L60.742,57.434"
+            style="fill: none; stroke: rgb(48, 48, 48); stroke-width: 7.85px"
+          />
+        </g>
+      </svg>
+    </button>
+  </nav>
+</header>
+<main>
+  <app-overview [project]="project"></app-overview>
+  <app-problem-solution [project]="project"></app-problem-solution>
+  <app-technologies [project]="project"></app-technologies>
+  <app-execution [project]="project"></app-execution>
+</main>

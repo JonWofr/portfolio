@@ -1,0 +1,114 @@
+@import "abstracts/variables";
+
+div.container {
+  padding-bottom: $default-section-padding-bottom;
+}
+
+p.project-type {
+  text-align: start;
+  margin-bottom: 0.5rem;
+}
+
+div.image-container {
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.cinema-image-container {
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
+div.padding-top-hack-outer-container {
+  // 16:10 aspect ratio
+  padding-top: 62.5%;
+  position: relative;
+}
+
+div.padding-top-hack-inner-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+img.slideshow-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img.slideshow-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+}
+
+div.preview-images-container {
+  display: flex;
+  overflow-x: auto;
+  justify-content: center;
+  gap: 0 0.75rem;
+  // Padding and negative margin is used so that the box shadows of child elements are visible.
+  // Otherwise they would not be visible due to the overflow property being set.
+  margin: -0.5rem -0.5rem 1.5rem -0.5rem;
+  padding: 0.5rem;
+}
+
+div.preview-image-container {
+  flex: 0 0 auto;
+  width: 20%;
+  min-width: 90px;
+  max-width: 200px;
+  border-radius: $default-card-border-radius;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+div.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000055;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+div.black-overlay.visible {
+  opacity: 1;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  letter-spacing: calc(1 / 32 * 1em);
+}
+
+p.short-description {
+  font-size: 1.125rem;
+  letter-spacing: calc(1 / 18 * 1em);
+}

@@ -1,11 +1,13 @@
-<img [src]="project?.thumbnailImageUrl" alt="" />
-<p class="project-type">
-  {{ project?.type }}
-</p>
-<h3 class="subsection-heading">
-  {{ project?.title }}
-</h3>
-<p class="subsection-paragraph">
-  {{ project?.description }}
-</p>
-<a href="/"> mehr</a>
+<a [routerLink]="'/projects/' + project?.id">
+  <img [src]="project?.thumbnailImageUrl" alt="" />
+  <p class="project-type">
+    {{ project?.type }}
+  </p>
+  <h3 class="subsection-heading">
+    {{ project?.title }}
+  </h3>
+  <p class="subsection-paragraph">
+    {{ project?.teaser }}
+  </p>
+  <p class="more-label">mehr</p>
+</a>
