@@ -42,17 +42,18 @@
   </div>
   <ul [ngClass]="shouldShowMenu ? 'expanded' : 'collapsed'">
     <li>
-      <a href="/">Home</a>
+      <a routerLink="/">Home</a>
     </li>
-    <li><a href="/"> About me</a></li>
+    <li><a routerLink="/" fragment="about"> About me</a></li>
+    <li><a routerLink="/" fragment="services"> Services</a></li>
     <li>
-      <a href="/"> Portfolio</a>
-    </li>
-    <li>
-      <a href="/"> Resume</a>
+      <a routerLink="/" fragment="portfolio"> Portfolio</a>
     </li>
     <li>
-      <a href="/"> Contact me</a>
+      <a routerLink="/" fragment="resume"> Resume</a>
+    </li>
+    <li>
+      <a routerLink="/" fragment="contact"> Contact me</a>
     </li>
   </ul>
 </header>

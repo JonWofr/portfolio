@@ -20,6 +20,9 @@ import { ProblemSolutionComponent } from './views/project-detail/components/prob
 import { OverviewComponent } from './views/project-detail/components/overview/overview.component';
 import { TechnologiesComponent } from './views/project-detail/components/technologies/technologies.component';
 import { ExecutionComponent } from './views/project-detail/components/execution/execution.component';
+import { ContactComponent } from './views/home/components/contact/contact.component';
+import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -41,8 +44,10 @@ import { ExecutionComponent } from './views/project-detail/components/execution/
     OverviewComponent,
     TechnologiesComponent,
     ExecutionComponent,
+    ContactComponent,
+    FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

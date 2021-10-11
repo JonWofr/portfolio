@@ -1,6 +1,6 @@
 <header>
   <nav>
-    <button (click)="onClickCloseButton()">
+    <a routerLink="/" fragment="portfolio">
       <svg
         width="100%"
         height="100%"
@@ -35,7 +35,7 @@
           />
         </g>
       </svg>
-    </button>
+    </a>
   </nav>
 </header>
 <main>
@@ -44,3 +44,4 @@
   <app-technologies [project]="project"></app-technologies>
   <app-execution [project]="project"></app-execution>
 </main>
+<app-footer></app-footer>

@@ -1,4 +1,6 @@
+@import "abstracts/variables";
+
 :host {
   display: block;
-  background-color: #f6f6f6;
+  background-color: $secondary-background-color-light;
 }

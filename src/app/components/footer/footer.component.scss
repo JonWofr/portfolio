@@ -1,0 +1,60 @@
+@import "abstracts/variables";
+
+:host {
+  display: block;
+  background-color: $primary-background-color-dark;
+}
+
+footer {
+  padding-top: $default-section-padding-top;
+  padding-bottom: $default-section-padding-bottom;
+}
+
+div.boxes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  margin-bottom: 3rem;
+}
+
+div.box {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem 0;
+  background-color: $secondary-background-color-dark;
+}
+
+div.box:nth-of-type(2) {
+  background-color: $accent-color;
+}
+
+svg {
+  fill: $primary-font-color-light;
+}
+
+p {
+  font-family: $primary-font-regular;
+  color: $secondary-font-color-light;
+  font-size: 0.875rem;
+}
+
+div.social-media-icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 0 0.75rem;
+}
+
+a {
+  display: block;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+}
+
+path {
+  fill: $primary-font-color-light;
+}

@@ -29,6 +29,7 @@
 * {
   color: $secondary-font-color-dark;
   text-align: center;
+  font-family: $secondary-font-regular;
 }
 
 h1,
@@ -53,6 +54,8 @@ h3 {
   font-size: 1.125rem;
 }
 
-p {
-  font-family: $secondary-font-regular;
+input,
+textarea {
+  font-size: 0.875rem;
+  text-align: start;
 }
