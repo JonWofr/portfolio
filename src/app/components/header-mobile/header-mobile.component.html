@@ -1,5 +1,9 @@
-<header [ngClass]="headerBackgroundColor">
-  <div class="top-row" [ngClass]="headerBackgroundColor">
+<header
+  *ngIf="headerBackgroundColor !== undefined"
+  [ngClass]="headerBackgroundColor"
+  class="header"
+>
+  <div class="header-top-row" [ngClass]="headerBackgroundColor">
     <p>Jonas Wolfram</p>
     <button (click)="toggleMenu()">
       <svg
@@ -42,18 +46,64 @@
   </div>
   <ul [ngClass]="shouldShowMenu ? 'expanded' : 'collapsed'">
     <li>
-      <a routerLink="/">Home</a>
+      <a
+        routerLink="/"
+        [skipLocationChange]="true"
+        [class.active]="activeSectionId === SectionId.HOME"
+        (click)="toggleMenu()"
+      >
+        <p>Home</p>
+      </a>
     </li>
-    <li><a routerLink="/" fragment="about"> About me</a></li>
-    <li><a routerLink="/" fragment="services"> Services</a></li>
     <li>
-      <a routerLink="/" fragment="portfolio"> Portfolio</a>
+      <a
+        routerLink="/"
+        [fragment]="SectionId.ABOUT"
+        [skipLocationChange]="true"
+        [class.active]="activeSectionId === SectionId.ABOUT"
+        (click)="toggleMenu()"
+        ><p>About</p></a
+      >
     </li>
     <li>
-      <a routerLink="/" fragment="resume"> Resume</a>
+      <a
+        routerLink="/"
+        [fragment]="SectionId.MY_SERVICES"
+        [skipLocationChange]="true"
+        [class.active]="activeSectionId === SectionId.MY_SERVICES"
+        (click)="toggleMenu()"
+        ><p>Services</p></a
+      >
     </li>
     <li>
-      <a routerLink="/" fragment="contact"> Contact me</a>
+      <a
+        routerLink="/"
+        [fragment]="SectionId.PROJECTS"
+        [skipLocationChange]="true"
+        [class.active]="activeSectionId === SectionId.PROJECTS"
+        (click)="toggleMenu()"
+        ><p>Portfolio</p></a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/"
+        [fragment]="SectionId.RESUME"
+        [skipLocationChange]="true"
+        [class.active]="activeSectionId === SectionId.RESUME"
+        (click)="toggleMenu()"
+        ><p>Resume</p></a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/"
+        [fragment]="SectionId.CONTACT"
+        [skipLocationChange]="true"
+        [class.active]="activeSectionId === SectionId.CONTACT"
+        (click)="toggleMenu()"
+        ><p>Contact Me</p></a
+      >
     </li>
   </ul>
 </header>

@@ -59,3 +59,21 @@ textarea {
   font-size: 0.875rem;
   text-align: start;
 }
+
+@include media-breakpoint-up("md") {
+  h1 {
+    font-size: calc(2rem * 1.05);
+  }
+  h2 {
+    font-size: calc(1.75rem * 1.05);
+  }
+}
+
+@include media-breakpoint-up("lg") {
+  h1 {
+    font-size: calc(2rem * 1.05 * 1.05);
+  }
+  h2 {
+    font-size: calc(1.75rem * 1.05 * 1.05);
+  }
+}

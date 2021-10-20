@@ -1,71 +1,23 @@
 @import "abstracts/variables";
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  transition-property: border-bottom-color, box-shadow;
-  transition-duration: 0.375s;
-  transition-timing-function: ease-in-out;
+div.header-top-row.white svg {
+  fill: $secondary-font-color-dark;
 }
 
-header.transparent {
-  border-bottom: 1px solid #555;
+div.header-top-row.transparent svg {
+  fill: $primary-font-color-light;
 }
 
-header.white {
-  border-bottom: 1px solid $primary-font-color-light;
-  box-shadow: $default-box-shadow;
-}
-
-div.top-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  transition: background-color 0.375s ease-in-out;
-
-  p {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    transition: color 0.375s ease-in-out;
-  }
-
-  button {
-    background-color: transparent;
-    border: none;
-    svg {
-      display: block;
-      width: 2rem;
-      height: 2rem;
-      transition: fill 0.375s ease-in-out;
-    }
-  }
-}
-
-div.top-row.white {
-  background-color: $primary-font-color-light;
-
-  p {
-    color: $secondary-font-color-dark;
-  }
-
-  svg {
-    fill: $secondary-font-color-dark;
-  }
-}
-
-div.top-row.transparent {
+button {
   background-color: transparent;
+  border: none;
+}
 
-  p {
-    color: $primary-font-color-light;
-  }
-
-  svg {
-    fill: $primary-font-color-light;
-  }
+svg {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  transition: fill 0.375s ease-in-out;
 }
 
 ul {
@@ -74,23 +26,6 @@ ul {
   background-color: $primary-font-color-light;
   transition: height 0.25s ease-in-out;
   overflow: hidden;
-
-  a {
-    display: block;
-    padding: 0.75rem 1.25rem;
-    text-transform: uppercase;
-    font-family: $secondary-font-regular;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  li:first-child a {
-    padding-top: 1.5rem;
-  }
-
-  li:last-child a {
-    padding-bottom: 1.5rem;
-  }
 }
 
 ul.collapsed {
@@ -99,5 +34,48 @@ ul.collapsed {
 
 ul.expanded {
   // Height has to be set manually. Height auto can't be animated.
-  height: calc(6 * 1.5rem + 7 * 1.5rem);
+  height: calc(6 * 2rem + 7 * 0.5rem);
+}
+
+li:first-child a {
+  padding-top: 0.5rem;
+}
+
+li:last-child a {
+  padding-bottom: 0.5rem;
+}
+
+a {
+  display: block;
+  padding: 0.25rem 0;
+}
+
+a p {
+  display: inline-block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-family: $secondary-font-regular;
+  font-size: 1rem;
+  line-height: 2rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: $accent-color;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.25s ease-in-out;
+  }
+}
+
+a.active p,
+a:hover p {
+  &::after {
+    width: 100%;
+  }
 }

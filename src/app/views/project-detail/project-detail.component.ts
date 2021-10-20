@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderBackgroundColor } from 'src/app/enums/header-background-color.enum';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Project } from 'src/app/models/project.model';
 import { projects } from 'src/app/data/projects';
+import { Location } from '@angular/common';
+import { HeaderBackgroundColor } from 'src/app/enums/header-background-color.enum';
 
 @Component({
   selector: 'app-project-detail',
@@ -10,10 +11,13 @@ import { projects } from 'src/app/data/projects';
   styleUrls: ['./project-detail.component.scss'],
 })
 export class ProjectDetailComponent implements OnInit {
-  headerBackgroundColor = HeaderBackgroundColor;
   project?: Project;
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -26,5 +30,10 @@ export class ProjectDetailComponent implements OnInit {
       this.router.navigateByUrl('/');
       return;
     }
+  }
+
+  back() {
+    console.log('back navigation');
+    this.location.back();
   }
 }

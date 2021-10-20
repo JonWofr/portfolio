@@ -1,7 +1,12 @@
 @import "abstracts/variables";
 
 div.container {
-  padding-bottom: $default-section-padding-bottom;
+  padding-bottom: var(--default-section-padding-bottom);
+}
+
+div.project-type-and-cinema-image-container {
+  max-width: 800px;
+  margin: 0 auto 0.75rem auto;
 }
 
 p.project-type {
@@ -16,7 +21,6 @@ div.image-container {
 
 div.cinema-image-container {
   border-radius: 12px;
-  margin-bottom: 0.75rem;
 }
 
 div.padding-top-hack-outer-container {
@@ -57,20 +61,28 @@ img.slideshow-image {
 
 div.preview-images-container {
   display: flex;
-  overflow-x: auto;
-  justify-content: center;
   gap: 0 0.75rem;
-  // Padding and negative margin is used so that the box shadows of child elements are visible.
-  // Otherwise they would not be visible due to the overflow property being set.
-  margin: -0.5rem -0.5rem 1.5rem -0.5rem;
-  padding: 0.5rem;
+  overflow: auto;
+  // This is necessary because otherwise the box shadow would not be visible anymore. The box shadow gets cut off because of the the overflow property.
+  padding: 0.5rem 0;
+  margin: -0.5rem 0 1.5rem 0;
+
+  & > * {
+    width: calc(1 / 3 * 100% - 1 / 3 * 100% / 2 / 3 - 2 / 3 * 0.75rem);
+    max-width: 150px;
+    flex: 0 0 auto;
+
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &:last-child {
+      margin-right: auto;
+    }
+  }
 }
 
 div.preview-image-container {
-  flex: 0 0 auto;
-  width: 20%;
-  min-width: 90px;
-  max-width: 200px;
   border-radius: $default-card-border-radius;
 }
 
@@ -104,7 +116,7 @@ svg {
 }
 
 h1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   letter-spacing: calc(1 / 32 * 1em);
 }
 

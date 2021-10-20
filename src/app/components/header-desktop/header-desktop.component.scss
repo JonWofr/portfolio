@@ -1,0 +1,45 @@
+@import "abstracts/variables";
+
+div.header-top-row.white a {
+  color: $secondary-font-color-dark;
+}
+
+div.header-top-row.transparent a {
+  color: $primary-font-color-light;
+}
+
+ul {
+  display: flex;
+}
+
+a {
+  display: block;
+  text-transform: uppercase;
+  font-family: $secondary-font-bold;
+  font-size: 0.875rem;
+  line-height: 2rem;
+  padding: 0 0.75rem;
+  letter-spacing: calc(1 / 14 * 1em);
+  position: relative;
+  transition: color 0.375s ease-in-out;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: $accent-color;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.25s ease-in-out;
+  }
+}
+
+a.active,
+a:hover {
+  &::after {
+    width: calc(100% - 2 * 0.75rem);
+  }
+}

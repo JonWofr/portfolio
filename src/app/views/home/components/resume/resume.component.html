@@ -1,4 +1,4 @@
-<section class="section container" id="resume">
+<section class="section container">
   <h2 class="section-heading">Ausbildung</h2>
   <p class="section-paragraph">
     Sit anim laborum in quis voluptate labore adipisicing dolor tempor.
@@ -9,6 +9,7 @@
     <app-resume-card
       *ngFor="let academicJob of academicJobs"
       [job]="academicJob"
+      appFadeIn
     ></app-resume-card>
   </div>
 </section>
@@ -20,6 +21,10 @@
     ipsum elit labore excepteur sint commodo nisi commodo mollit.
   </p>
   <div class="cards-container">
-    <app-resume-card *ngFor="let job of jobs" [job]="job"></app-resume-card>
+    <app-resume-card
+      *ngFor="let job of jobs"
+      [job]="job"
+      appFadeIn
+    ></app-resume-card>
   </div>
 </section>

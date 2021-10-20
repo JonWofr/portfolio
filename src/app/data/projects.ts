@@ -19,6 +19,8 @@ export const projects: Project[] = [
       '/assets/images/projects/yumto/yumto-1.png',
       '/assets/images/projects/yumto/yumto-2.png',
       '/assets/images/projects/yumto/yumto-3.png',
+      '/assets/images/projects/yumto/yumto-3.png',
+      '/assets/images/projects/yumto/yumto-3.png',
     ],
     technologyNames: ['HTML', 'CSS', 'JavaScript', 'Sass', 'Angular'],
     execution:

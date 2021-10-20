@@ -1,4 +1,11 @@
+@use "sass:map";
 @import "abstracts/variables";
+@import "abstracts/mixins";
+
+div.boxes-container {
+  display: flex;
+  flex-direction: column;
+}
 
 div.box {
   padding: 5rem 0;
@@ -12,6 +19,10 @@ div.box:nth-of-type(2) {
   background-color: $primary-background-color-dark;
 }
 
+div.box-content-container {
+  padding: 0 0.75rem;
+}
+
 h3.subsection-heading {
   color: $primary-font-color-light;
   text-transform: uppercase;
@@ -19,4 +30,58 @@ h3.subsection-heading {
 
 p.subsection-paragraph {
   color: $secondary-font-color-light;
+}
+
+@include media-breakpoint-up("sm") {
+  div.box-content-container {
+    max-width: map.get($container-widths, "sm");
+    margin: 0 auto;
+    padding: initial;
+  }
+}
+
+@include media-breakpoint-up("md") {
+  div.boxes-container {
+    flex-direction: row;
+
+    & > * {
+      flex: 1;
+    }
+  }
+
+  div.box {
+    padding: 7rem 0;
+  }
+
+  div.box:first-of-type div.box-content-container {
+    padding-right: 2rem;
+    margin-left: auto;
+  }
+
+  div.box:last-of-type div.box-content-container {
+    padding-left: 2rem;
+    margin-right: auto;
+  }
+
+  div.box-content-container {
+    max-width: initial;
+    margin: initial;
+    width: calc(#{map.get($container-widths, "md")}/ 2);
+  }
+}
+
+@include media-breakpoint-up("lg") {
+  div.box-content-container {
+    width: calc(#{map.get($container-widths, "lg")}/ 2);
+  }
+}
+@include media-breakpoint-up("xl") {
+  div.box-content-container {
+    width: calc(#{map.get($container-widths, "xl")}/ 2);
+  }
+}
+@include media-breakpoint-up("xxl") {
+  div.box-content-container {
+    width: calc(#{map.get($container-widths, "xxl")}/ 2);
+  }
 }

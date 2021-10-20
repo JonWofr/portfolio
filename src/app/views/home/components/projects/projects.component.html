@@ -1,4 +1,4 @@
-<section class="section container" id="portfolio">
+<section class="section container">
   <h2 class="section-heading">Portfolio</h2>
   <p class="section-paragraph">
     Cupidatat enim tempor laboris commodo est. Enim qui deserunt aliqua
@@ -13,6 +13,7 @@
     <app-project
       *ngFor="let project of projects"
       [project]="project"
+      appFadeIn
     ></app-project>
   </div>
 </section>

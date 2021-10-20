@@ -1,12 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-  Output,
-  EventEmitter,
-} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HeaderBackgroundColor } from 'src/app/enums/header-background-color.enum';
 
 @Component({
@@ -14,13 +6,18 @@ import { HeaderBackgroundColor } from 'src/app/enums/header-background-color.enu
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss'],
 })
-export class HeroComponent implements OnInit, AfterViewInit {
+export class HeroComponent implements OnInit {
   containerBackgroundPositionY = 0;
   typedWord = '';
   shouldShowCursor = true;
+  intersectionObserverOptions: IntersectionObserverInit = {
+    root: null,
+    // Has to be set to the value of the header's height
+    rootMargin: '-64px 0px 0px 0px',
+    threshold: 1.0,
+  };
+  isContactButtonIntersecting?: boolean;
 
-  @ViewChild('introductionContainer')
-  introductionContainer?: ElementRef<HTMLDivElement>;
   @Output() setHeaderBackgroundColor =
     new EventEmitter<HeaderBackgroundColor>();
 
@@ -100,26 +97,15 @@ export class HeroComponent implements OnInit, AfterViewInit {
     });
   }
 
-  ngAfterViewInit(): void {
-    const options = {
-      root: null,
-      // Has to be set to the value of the header's height
-      rootMargin: '-64px 0px 0px 0px',
-      threshold: 1.0,
-    };
-
-    const observer = new IntersectionObserver((entries, _) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          this.setHeaderBackgroundColor.emit(HeaderBackgroundColor.TRANSPARENT);
-        } else {
-          this.setHeaderBackgroundColor.emit(HeaderBackgroundColor.WHITE);
-        }
-      });
-    }, options);
-
-    if (this.introductionContainer?.nativeElement) {
-      observer.observe(this.introductionContainer?.nativeElement);
+  onIntroductionContainerIntersectionChange(isIntersecting: boolean): void {
+    if (isIntersecting) {
+      this.setHeaderBackgroundColor.emit(HeaderBackgroundColor.TRANSPARENT);
+    } else {
+      this.setHeaderBackgroundColor.emit(HeaderBackgroundColor.WHITE);
     }
+  }
+
+  onContactButtonIntersectionChange(isIntersecting: boolean): void {
+    this.isContactButtonIntersecting = isIntersecting;
   }
 }

@@ -1,19 +1,21 @@
+@use "sass:map";
+@import "abstracts/variables";
+
 p.section-paragraph {
   margin-bottom: 2.5rem;
 }
 
 div.projects-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 
   & > * {
-    margin: 2rem 0;
-
-    &:first-child {
-      margin-top: 0;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
+    width: 100%;
+    // Two items should be in one line for device width lg and above.
+    // Therefore max width is half of lg container width minus half of the spacing between the two items.
+    max-width: calc(#{map.get($container-widths, "lg")} / 2 - 2rem / 2);
+    flex: 0 0 auto;
   }
 }

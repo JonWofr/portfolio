@@ -23,6 +23,8 @@ import { ExecutionComponent } from './views/project-detail/components/execution/
 import { ContactComponent } from './views/home/components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { IntersectionObserverDirective } from './directives/intersection-observer/intersection-observer.directive';
+import { FadeInDirective } from './directives/fade-in/fade-in.directive';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ExecutionComponent,
     ContactComponent,
     FooterComponent,
+    IntersectionObserverDirective,
+    FadeInDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

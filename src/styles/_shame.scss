@@ -1,3 +1,5 @@
+@import "abstracts/mixins";
+
 p.project-type {
   color: $accent-color;
   font-size: 0.75rem;
@@ -5,4 +7,26 @@ p.project-type {
   text-transform: uppercase;
   font-family: $secondary-font-bold;
   margin-bottom: 0.125rem;
+}
+
+:root {
+  --default-section-padding-top: 2.5rem;
+  --default-section-padding-bottom: 3.5rem;
+  scroll-behavior: smooth;
+}
+
+@include media-breakpoint-up("md") {
+  :root {
+    --default-section-padding-top: calc(2.5rem * 1.5);
+    --default-section-padding-bottom: calc(3.5rem * 1.5);
+    // font-size: calc(16px * 1.05);
+  }
+}
+
+@include media-breakpoint-up("lg") {
+  :root {
+    --default-section-padding-top: calc(2.5rem * 1.5 * 1.5);
+    --default-section-padding-bottom: calc(3.5rem * 1.5 * 1.5);
+    // font-size: calc(16px * 1.05 * 1.05);
+  }
 }

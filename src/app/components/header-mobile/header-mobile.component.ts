@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HeaderBackgroundColor } from 'src/app/enums/header-background-color.enum';
+import { SectionId } from 'src/app/enums/section-id.enum';
 
 @Component({
   selector: 'app-header-mobile',
@@ -7,19 +8,11 @@ import { HeaderBackgroundColor } from 'src/app/enums/header-background-color.enu
   styleUrls: ['./header-mobile.component.scss'],
 })
 export class HeaderMobileComponent implements OnInit {
+  @Input() headerBackgroundColor?: HeaderBackgroundColor;
+  @Input() activeSectionId?: SectionId;
+
+  SectionId = SectionId;
   shouldShowMenu = false;
-
-  private _headerBackgroundColor: HeaderBackgroundColor =
-    HeaderBackgroundColor.TRANSPARENT;
-
-  get headerBackgroundColor() {
-    return this._headerBackgroundColor;
-  }
-  @Input() set headerBackgroundColor(
-    headerBackgroundColor: HeaderBackgroundColor
-  ) {
-    this._headerBackgroundColor = headerBackgroundColor;
-  }
 
   constructor() {}
 

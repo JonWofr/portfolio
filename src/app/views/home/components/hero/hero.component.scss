@@ -1,73 +1,108 @@
 @import "abstracts/variables.scss";
 
 div.background-container {
-  height: 75vh;
+  height: 80vh;
   background-image: url("/assets/images/laptop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: center;
   position: relative;
+}
 
-  div.overlay {
-    background-color: rgba($color: #000000, $alpha: 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+div.overlay {
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
-  div.introduction-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: 120px;
-    width: 100%;
+div.introduction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
 
-    img {
-      width: 150px;
-      height: 150px;
-      box-sizing: content-box;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 10px solid rgba($color: #ffffff, $alpha: 0.1);
-    }
+img {
+  width: 150px;
+  height: 150px;
+  box-sizing: content-box;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid rgba($color: #ffffff, $alpha: 0.1);
+  margin-bottom: 1rem;
+}
 
-    div.text-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 1.5rem;
+div.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
 
-      h1 {
-        color: $primary-font-color-light;
-      }
+h1 {
+  color: $primary-font-color-light;
+}
 
-      div.subtitle-container {
-        display: flex;
-        align-items: center;
-        position: relative;
+div.subtitle-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
-        p {
-          color: $primary-font-color-light;
-          font-size: 1.125rem;
-          line-height: 1.25;
+p.subtitle {
+  color: $primary-font-color-light;
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
 
-          span.typed-word {
-            font-family: $secondary-font-bold;
-            color: inherit;
-          }
-        }
+span.typed-word {
+  font-family: $secondary-font-bold;
+  color: inherit;
+}
 
-        div.cursor {
-          width: 1px;
-          height: calc(1.125rem * 1.25);
-          position: absolute;
-          top: 0;
-          right: 0;
-          background-color: white;
-        }
-      }
-    }
-  }
+div.cursor {
+  width: 1px;
+  height: calc(1.125rem * 1.25);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+}
+
+div.contact-button-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: calc(100% - 64px);
+}
+
+a.button {
+  position: absolute;
+  bottom: calc(100% - 64px);
+  right: 50%;
+  transform: translate(50%, 100%);
+  width: 10.25rem;
+  height: 2.75rem;
+  border-radius: $default-card-border-radius;
+
+  z-index: 1;
+  overflow: hidden;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+a.button.fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transform: initial;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
 }

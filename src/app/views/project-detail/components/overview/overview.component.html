@@ -1,28 +1,26 @@
 <div class="container">
-  <p class="project-type">
-    {{ project?.type }}
-  </p>
-  <div
-    class="
-      padding-top-hack-outer-container
-      image-container
-      cinema-image-container
-    "
-  >
-    <div class="padding-top-hack-inner-container">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div
-            *ngFor="let slideshowImageUrl of project?.slideshowImagesUrls"
-            class="swiper-slide"
-          >
-            <img
-              *ngIf="project?.type === ProjectType.MOBILE"
-              class="slideshow-background-image"
-              [src]="slideshowImageUrl"
-              alt=""
-            />
-            <img class="slideshow-image" [src]="slideshowImageUrl" alt="" />
+  <div class="project-type-and-cinema-image-container">
+    <p class="project-type">
+      {{ project?.type }}
+    </p>
+    <div class="cinema-image-container image-container">
+      <div class="padding-top-hack-outer-container">
+        <div class="padding-top-hack-inner-container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div
+                *ngFor="let slideshowImageUrl of project?.slideshowImagesUrls"
+                class="swiper-slide"
+              >
+                <img
+                  *ngIf="project?.type === ProjectType.MOBILE"
+                  class="slideshow-background-image"
+                  [src]="slideshowImageUrl"
+                  alt=""
+                />
+                <img class="slideshow-image" [src]="slideshowImageUrl" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

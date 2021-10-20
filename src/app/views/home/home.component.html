@@ -1,16 +1,49 @@
 <app-header-mobile
   *appMedia="'(max-width: 767px)'"
   [headerBackgroundColor]="headerBackgroundColor"
+  [activeSectionId]="activeSectionId"
 ></app-header-mobile>
-<app-header-desktop *appMedia="'(min-width: 768px)'"></app-header-desktop>
+<app-header-desktop
+  *appMedia="'(min-width: 768px)'"
+  [headerBackgroundColor]="headerBackgroundColor"
+  [activeSectionId]="activeSectionId"
+></app-header-desktop>
 <main>
   <app-hero
     (setHeaderBackgroundColor)="onSetHeaderBackgroundColor($event)"
+    appIntersectionObserver
+    [options]="intersectionObserverOptions"
+    (intersectionChange)="onIntersectionChange(sections[0].id, $event)"
   ></app-hero>
-  <app-about></app-about>
-  <app-my-services></app-my-services>
-  <app-projects></app-projects>
-  <app-resume></app-resume>
-  <app-contact></app-contact>
+  <app-about
+    [id]="sections[1].id"
+    appIntersectionObserver
+    [options]="intersectionObserverOptions"
+    (intersectionChange)="onIntersectionChange(sections[1].id, $event)"
+  ></app-about>
+  <app-my-services
+    [id]="sections[2].id"
+    appIntersectionObserver
+    [options]="intersectionObserverOptions"
+    (intersectionChange)="onIntersectionChange(sections[2].id, $event)"
+  ></app-my-services>
+  <app-projects
+    [id]="sections[3].id"
+    appIntersectionObserver
+    [options]="intersectionObserverOptions"
+    (intersectionChange)="onIntersectionChange(sections[3].id, $event)"
+  ></app-projects>
+  <app-resume
+    [id]="sections[4].id"
+    appIntersectionObserver
+    [options]="intersectionObserverOptions"
+    (intersectionChange)="onIntersectionChange(sections[4].id, $event)"
+  ></app-resume>
+  <app-contact
+    [id]="sections[5].id"
+    appIntersectionObserver
+    [options]="intersectionObserverOptions"
+    (intersectionChange)="onIntersectionChange(sections[5].id, $event)"
+  ></app-contact>
 </main>
 <app-footer></app-footer>

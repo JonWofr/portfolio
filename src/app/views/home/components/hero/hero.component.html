@@ -3,16 +3,50 @@
   [style.background-position-y]="containerBackgroundPositionY + 'px'"
 >
   <div class="overlay"></div>
-  <div #introductionContainer class="introduction-container">
+  <div class="introduction-container">
+    <!--The following div is just there to trigger the animation for the header-->
+    <div
+      appIntersectionObserver
+      [options]="intersectionObserverOptions"
+      (intersectionChange)="onIntroductionContainerIntersectionChange($event)"
+    ></div>
     <img src="/assets/images/me.jpeg" alt="" />
     <div class="text-container">
       <h1>Jonas Wolfram</h1>
       <div class="subtitle-container">
-        <p>
+        <p class="subtitle">
           Ich bin ein&nbsp;<span class="typed-word">{{ typedWord }}</span>
         </p>
         <div *ngIf="shouldShowCursor" class="cursor"></div>
       </div>
+    </div>
+    <!--The following div is just there to trigger the animation for the contact button-->
+    <div
+      appIntersectionObserver
+      [options]="intersectionObserverOptions"
+      (intersectionChange)="onContactButtonIntersectionChange($event)"
+    ></div>
+    <div class="contact-button-container">
+      <a
+        *ngIf="isContactButtonIntersecting !== undefined"
+        class="button"
+        routerLink="/"
+        fragment="contact"
+        [skipLocationChange]="true"
+        [class.fixed]="!isContactButtonIntersecting"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"
+          />
+        </svg>
+        <p *ngIf="isContactButtonIntersecting">Contact&nbsp;Me</p>
+      </a>
     </div>
   </div>
 </div>

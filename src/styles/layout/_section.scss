@@ -1,14 +1,15 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 section.section {
-  padding-top: $default-section-padding-top;
-  padding-bottom: $default-section-padding-bottom;
+  padding-top: var(--default-section-padding-top);
+  padding-bottom: var(--default-section-padding-bottom);
 }
 
 h2.section-heading {
   position: relative;
   margin-bottom: 3rem;
-  padding-bottom: 0.4rem;
+  padding-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: calc(2 / 28 * 1em);
 
