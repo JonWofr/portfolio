@@ -3,95 +3,151 @@
   <p class="section-paragraph">
     Cillum consectetur cupidatat nulla in occaecat qui.
   </p>
-  <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
-    <div class="name-and-email-container">
-      <div>
-        <div class="formgroup">
-          <label for="name">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"
-              />
-            </svg>
-          </label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            [(ngModel)]="contact.name"
-            required
-            placeholder="Your Name"
-            #name="ngModel"
-          />
+  <div class="form-container">
+    <form
+      #contactForm="ngForm"
+      [class.visible]="emailStatus === EmailStatus.INITIAL"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="name-and-email-container">
+        <div>
+          <div class="formgroup">
+            <label for="name">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"
+                />
+              </svg>
+            </label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              [(ngModel)]="contact.name"
+              required
+              placeholder="Your Name"
+              #name="ngModel"
+            />
+          </div>
+          <div *ngIf="name.invalid && name.touched" class="alerts-container">
+            <p *ngIf="name.errors?.required" class="alert">Name is required.</p>
+          </div>
         </div>
-        <div *ngIf="name.invalid && name.touched" class="alerts-container">
-          <p *ngIf="name.errors?.required" class="alert">Name is required.</p>
-        </div>
-      </div>
-      <div>
-        <div class="formgroup">
-          <label for="email">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"
-              />
-            </svg>
-          </label>
+        <div>
+          <div class="formgroup">
+            <label for="email">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"
+                />
+              </svg>
+            </label>
 
-          <input
-            type="email"
-            name="email"
-            [(ngModel)]="contact.email"
-            required
-            placeholder="Your Email Address"
-            email
-            #email="ngModel"
-          />
-        </div>
-        <div *ngIf="email.invalid && email.touched" class="alerts-container">
-          <p *ngIf="email.errors?.required" class="alert">Email is required.</p>
-          <p *ngIf="email.errors?.email" class="alert">Invalid email.</p>
+            <input
+              type="email"
+              name="email"
+              [(ngModel)]="contact.email"
+              required
+              placeholder="Your Email Address"
+              email
+              #email="ngModel"
+            />
+          </div>
+          <div *ngIf="email.invalid && email.touched" class="alerts-container">
+            <p *ngIf="email.errors?.required" class="alert">
+              Email is required.
+            </p>
+            <p *ngIf="email.errors?.email" class="alert">Invalid email.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div>
-      <textarea
-        name="message"
-        [(ngModel)]="contact.message"
-        rows="5"
-        required
-        placeholder="Your message..."
-        #message="ngModel"
-      ></textarea>
-      <div *ngIf="message.invalid && message.touched" class="alerts-container">
-        <p *ngIf="message.errors?.required" class="alert">
-          Message is required.
-        </p>
+      <div>
+        <textarea
+          name="message"
+          [(ngModel)]="contact.message"
+          rows="10"
+          required
+          placeholder="Your message..."
+          #message="ngModel"
+        ></textarea>
+        <div
+          *ngIf="message.invalid && message.touched"
+          class="alerts-container"
+        >
+          <p *ngIf="message.errors?.required" class="alert">
+            Message is required.
+          </p>
+        </div>
       </div>
+      <button class="button" [disabled]="!contactForm.form.valid" type="submit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"
+          />
+        </svg>
+        <p>Submit</p>
+      </button>
+    </form>
+    <div
+      *ngIf="emailStatus === EmailStatus.PENDING"
+      class="lottie-player-container"
+    >
+      <lottie-player
+        src="/assets/animations/spinner.json"
+        background="rgba(0, 0, 0, 0)"
+        speed="1"
+        style="width: 150px; height: 150px"
+        autoplay
+        loop
+      ></lottie-player>
     </div>
-    <button class="button" [disabled]="!contactForm.form.valid" type="submit">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"
-        />
-      </svg>
-      <p>Submit</p>
-    </button>
-  </form>
+    <div
+      *ngIf="emailStatus === EmailStatus.ERROR"
+      class="lottie-player-container"
+    >
+      <lottie-player
+        src="/assets/animations/error.json"
+        background="rgba(0, 0, 0, 0)"
+        speed="1"
+        style="width: 150px; height: 150px"
+        autoplay
+      ></lottie-player>
+      <p>
+        <span class="bold-text">Ooops something went wrong!</span> <br />
+        Please try again
+      </p>
+    </div>
+    <div
+      *ngIf="emailStatus === EmailStatus.SUCCESS"
+      class="lottie-player-container"
+    >
+      <lottie-player
+        src="/assets/animations/success.json"
+        background="rgba(0, 0, 0, 0)"
+        speed="1"
+        style="width: 150px; height: 150px"
+        autoplay
+      ></lottie-player>
+      <p>
+        <span class="bold-text">Thank you! </span><br />
+        I will get in touch with you shortly.
+      </p>
+    </div>
+  </div>
 </section>
