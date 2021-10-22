@@ -1,4 +1,5 @@
 @import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
 
 div.background-container {
   height: 80vh;
@@ -86,23 +87,48 @@ a.button {
   bottom: calc(100% - 64px);
   right: 50%;
   transform: translate(50%, 100%);
-  width: 10.25rem;
-  height: 2.75rem;
-  border-radius: $default-card-border-radius;
-
   z-index: 1;
+
+  width: 10.25em;
+  height: 2.75em;
+
   overflow: hidden;
   justify-content: center;
   padding: 0;
-  transition: all 0.5s ease-in-out;
+  transition-property: background-color, bottom, right, transform, width, height,
+    border-radius;
+  transition-duration: 0.25s, 0.5s, 0.5s, 0.5s, 0.25s, 0.25s, 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+a.button svg {
+  transition-property: width, height;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 a.button.fixed {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 1em;
+  right: 1em;
   transform: initial;
-  width: 4rem;
-  height: 4rem;
+  width: 4em;
+  height: 4em;
   border-radius: 50%;
+}
+
+a.button.fixed svg {
+  font-size: 1.5em;
+}
+
+@include media-breakpoint-up("md") {
+  a.button.fixed {
+    font-size: 1.125rem;
+  }
+}
+
+@include media-breakpoint-up("lg") {
+  a.button.fixed {
+    font-size: 1.25rem;
+  }
 }

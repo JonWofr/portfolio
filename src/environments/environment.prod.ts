@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  backendUrl: '',
+  backendUrl: 'https://europe-west3-portfolio-29c37.cloudfunctions.net',
   firebaseConfig: {
     apiKey: 'AIzaSyCT5cMC0gYbUNaFdQckmbfHV6aENlmPulo',
     authDomain: 'portfolio-29c37.firebaseapp.com',

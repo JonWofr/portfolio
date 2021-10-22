@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backendUrl: 'http://localhost:5001/portfolio-29c37/us-central1',
+  backendUrl: 'http://localhost:5001/portfolio-29c37/europe-west3',
   firebaseConfig: {
     apiKey: 'AIzaSyCT5cMC0gYbUNaFdQckmbfHV6aENlmPulo',
     authDomain: 'portfolio-29c37.firebaseapp.com',
