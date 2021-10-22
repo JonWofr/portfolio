@@ -19,11 +19,15 @@ header.header.white {
 }
 
 div.header-top-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0;
   transition: background-color 0.375s ease-in-out;
 }
+
+div.header-top-row div.container {
+  display: flex;
+  justify-content: space-between;
+}
+
 div.header-top-row p {
   font-size: 1.25rem;
   line-height: 2rem;

@@ -1,6 +1,10 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
+button:not(button:disabled):hover {
+  cursor: pointer;
+}
+
 a.button,
 button.button {
   display: inline-flex;
@@ -36,7 +40,6 @@ button.button:disabled {
 button.button:hover:not(button.button:disabled),
 a.button:hover {
   background-color: $accent-color-hover;
-  cursor: pointer;
 }
 
 @include media-breakpoint-up("md") {

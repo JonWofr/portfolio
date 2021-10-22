@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Project } from 'src/app/models/project.model';
 import { projects } from 'src/app/data/projects';
 import { Location } from '@angular/common';
-import { HeaderBackgroundColor } from 'src/app/enums/header-background-color.enum';
 
 @Component({
   selector: 'app-project-detail',
@@ -33,7 +32,6 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   back() {
-    console.log('back navigation');
     this.location.back();
   }
 }

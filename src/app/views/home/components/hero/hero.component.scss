@@ -24,29 +24,33 @@ div.introduction-container {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 30%;
+  top: calc(
+    50% - (10em + 2 * 0.6125em + 0.75em + 2em * 1.25 + 1.125em * 1.25 + 2em) / 2
+  );
   width: 100%;
 }
 
 img {
-  width: 150px;
-  height: 150px;
+  width: 10em;
+  height: 10em;
   box-sizing: content-box;
   object-fit: cover;
   border-radius: 50%;
-  border: 10px solid rgba($color: #ffffff, $alpha: 0.1);
-  margin-bottom: 1rem;
+  border: 0.6125em solid rgba($color: #ffffff, $alpha: 0.1);
+  margin-bottom: 0.75em;
 }
 
 div.text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 }
 
 h1 {
   color: $primary-font-color-light;
+  font-size: 2em;
+  line-height: 1.25;
 }
 
 div.subtitle-container {
@@ -57,7 +61,7 @@ div.subtitle-container {
 
 p.subtitle {
   color: $primary-font-color-light;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   line-height: 1.25;
 }
 
@@ -68,7 +72,7 @@ span.typed-word {
 
 div.cursor {
   width: 1px;
-  height: calc(1.125rem * 1.25);
+  height: calc(1.125em * 1.25);
   position: absolute;
   top: 0;
   right: 0;
@@ -122,12 +126,20 @@ a.button.fixed svg {
 }
 
 @include media-breakpoint-up("md") {
+  div.introduction-container {
+    font-size: calc(1rem * 1.1);
+  }
+
   a.button.fixed {
     font-size: 1.125rem;
   }
 }
 
 @include media-breakpoint-up("lg") {
+  div.introduction-container {
+    font-size: calc(1rem * 1.1 * 1.1);
+  }
+
   a.button.fixed {
     font-size: 1.25rem;
   }

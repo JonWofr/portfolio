@@ -4,61 +4,63 @@
   class="header"
 >
   <div class="header-top-row" [ngClass]="headerBackgroundColor">
-    <p>Jonas Wolfram</p>
-    <ul>
-      <li>
-        <a
-          routerLink="/"
-          [skipLocationChange]="true"
-          [class.active]="activeSectionId === SectionId.HOME"
-          >Home</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/"
-          [fragment]="SectionId.ABOUT"
-          [skipLocationChange]="true"
-          [class.active]="activeSectionId === SectionId.ABOUT"
-          >About</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/"
-          [fragment]="SectionId.MY_SERVICES"
-          [skipLocationChange]="true"
-          [class.active]="activeSectionId === SectionId.MY_SERVICES"
-          >Services</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/"
-          [fragment]="SectionId.PROJECTS"
-          [skipLocationChange]="true"
-          [class.active]="activeSectionId === SectionId.PROJECTS"
-          >Portfolio</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/"
-          [fragment]="SectionId.RESUME"
-          [skipLocationChange]="true"
-          [class.active]="activeSectionId === SectionId.RESUME"
-          >Resume</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/"
-          [fragment]="SectionId.CONTACT"
-          [skipLocationChange]="true"
-          [class.active]="activeSectionId === SectionId.CONTACT"
-          >Contact Me</a
-        >
-      </li>
-    </ul>
+    <div class="container">
+      <p>Jonas Wolfram</p>
+      <ul>
+        <li>
+          <a
+            routerLink="/"
+            [skipLocationChange]="true"
+            [class.active]="activeSectionId === SectionId.HOME"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/"
+            [fragment]="SectionId.ABOUT"
+            [skipLocationChange]="true"
+            [class.active]="activeSectionId === SectionId.ABOUT"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/"
+            [fragment]="SectionId.MY_SERVICES"
+            [skipLocationChange]="true"
+            [class.active]="activeSectionId === SectionId.MY_SERVICES"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/"
+            [fragment]="SectionId.PROJECTS"
+            [skipLocationChange]="true"
+            [class.active]="activeSectionId === SectionId.PROJECTS"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/"
+            [fragment]="SectionId.RESUME"
+            [skipLocationChange]="true"
+            [class.active]="activeSectionId === SectionId.RESUME"
+            >Resume</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/"
+            [fragment]="SectionId.CONTACT"
+            [skipLocationChange]="true"
+            [class.active]="activeSectionId === SectionId.CONTACT"
+            >Contact Me</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </header>

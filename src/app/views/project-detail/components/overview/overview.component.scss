@@ -21,6 +21,11 @@ div.image-container {
 
 div.cinema-image-container {
   border-radius: 12px;
+  cursor: grab;
+}
+
+div.cinema-image-container:active {
+  cursor: grabbing;
 }
 
 div.padding-top-hack-outer-container {

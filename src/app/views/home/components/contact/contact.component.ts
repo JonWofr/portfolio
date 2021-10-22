@@ -41,4 +41,8 @@ export class ContactComponent implements OnInit {
         this.emailStatus = EmailStatus.ERROR;
       });
   }
+
+  onClickRetryButton() {
+    this.emailStatus = EmailStatus.INITIAL;
+  }
 }

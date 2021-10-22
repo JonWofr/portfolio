@@ -28,6 +28,7 @@ import { IntersectionObserverDirective } from './directives/intersection-observe
 import { FadeInDirective } from './directives/fade-in/fade-in.directive';
 
 @NgModule({
+  // Necessary for the usage of custom HTML elements (e.g. lottie-files) (which are not angular elements)
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent,
