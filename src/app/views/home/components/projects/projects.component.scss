@@ -1,10 +1,6 @@
 @use "sass:map";
 @import "abstracts/variables";
 
-p.section-paragraph {
-  margin-bottom: 2.5rem;
-}
-
 div.projects-container {
   display: flex;
   flex-wrap: wrap;

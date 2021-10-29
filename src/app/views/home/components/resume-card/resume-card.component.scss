@@ -18,3 +18,12 @@ p.employer-and-jobtype {
 p.duration {
   font-family: $secondary-font-light;
 }
+
+img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 0.25rem;
+  object-fit: cover;
+}

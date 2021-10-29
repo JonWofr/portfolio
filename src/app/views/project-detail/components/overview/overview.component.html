@@ -12,12 +12,16 @@
                 *ngFor="let slideshowImageUrl of project?.slideshowImagesUrls"
                 class="swiper-slide"
               >
-                <img
-                  *ngIf="project?.type === ProjectType.MOBILE"
+                <div
                   class="slideshow-background-image"
-                  [src]="slideshowImageUrl"
-                  alt=""
-                />
+                  [style.background]="
+                    'radial-gradient(' +
+                    project?.accentColor +
+                    'dd, ' +
+                    project?.accentColor +
+                    'ff)'
+                  "
+                ></div>
                 <img class="slideshow-image" [src]="slideshowImageUrl" alt="" />
               </div>
             </div>
@@ -37,15 +41,22 @@
       <button (click)="onClickPreviewImage(i)">
         <div class="padding-top-hack-outer-container">
           <div class="padding-top-hack-inner-container">
-            <img
-              *ngIf="project?.type === ProjectType.MOBILE"
+            <div
               class="slideshow-background-image"
-              [src]="slideshowImageUrl"
-              alt=""
-            />
+              [style.background]="
+                'radial-gradient(' +
+                project?.accentColor +
+                'dd, ' +
+                project?.accentColor +
+                'ff)'
+              "
+            ></div>
             <img class="slideshow-image" [src]="slideshowImageUrl" alt="" />
           </div>
-          <div class="black-overlay" [ngClass]="{ visible: slideIndex === i }">
+          <div
+            class="padding-top-hack-inner-container black-overlay"
+            [ngClass]="{ visible: slideIndex === i }"
+          >
             <svg
               width="100%"
               height="100%"

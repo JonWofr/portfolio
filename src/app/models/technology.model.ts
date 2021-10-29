@@ -1,5 +1,7 @@
+import { TechnologyName } from '../enums/technology-name.enum';
+
 export interface Technology {
-  name: string;
+  name: TechnologyName;
   iconUrl: string;
   accentColor: string;
 }

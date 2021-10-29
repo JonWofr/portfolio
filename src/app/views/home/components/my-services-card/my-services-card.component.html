@@ -1,5 +1,7 @@
 <div class="card">
-  <img class="card-image" [src]="myService?.iconUrl" alt="" />
+  <div class="image-container">
+    <img [src]="myService?.iconUrl" alt="" />
+  </div>
   <h3 class="card-heading subsection-heading">{{ myService?.title }}</h3>
   <p class="subsection-paragraph">{{ myService?.description }}</p>
 </div>

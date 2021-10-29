@@ -1,7 +1,9 @@
 <section class="section container">
-  <h2 class="section-heading">Contact Me</h2>
+  <h2 class="section-heading">Kontakt</h2>
   <p class="section-paragraph">
-    Cillum consectetur cupidatat nulla in occaecat qui.
+    Interesse? Dann kontaktiere mich bitte entweder über das hier
+    bereitgestellte Kontaktformular oder über die am Seitenende stehende
+    E-Mail-Adresse/Telefonnummer.
   </p>
   <div class="form-container">
     <form
@@ -30,12 +32,14 @@
               name="name"
               [(ngModel)]="contact.name"
               required
-              placeholder="Your Name"
+              placeholder="Dein Name"
               #name="ngModel"
             />
           </div>
           <div *ngIf="name.invalid && name.touched" class="alerts-container">
-            <p *ngIf="name.errors?.required" class="alert">Name is required.</p>
+            <p *ngIf="name.errors?.required" class="alert">
+              Du musst deinen Namen angeben
+            </p>
           </div>
         </div>
         <div>
@@ -58,27 +62,29 @@
               name="email"
               [(ngModel)]="contact.email"
               required
-              placeholder="Your Email Address"
+              placeholder="Deine E-Mail-Adresse"
               email
               #email="ngModel"
             />
           </div>
           <div *ngIf="email.invalid && email.touched" class="alerts-container">
             <p *ngIf="email.errors?.required" class="alert">
-              Email is required.
+              Du musst deine E-Mail-Adresse angeben
             </p>
-            <p *ngIf="email.errors?.email" class="alert">Invalid email.</p>
+            <p *ngIf="email.errors?.email" class="alert">
+              Ungültige E-Mail-Adresse
+            </p>
           </div>
         </div>
       </div>
 
-      <div>
+      <div class="textarea-container">
         <textarea
           name="message"
           [(ngModel)]="contact.message"
           rows="10"
           required
-          placeholder="Your message..."
+          placeholder="Deine Nachricht..."
           #message="ngModel"
         ></textarea>
         <div
@@ -86,7 +92,7 @@
           class="alerts-container"
         >
           <p *ngIf="message.errors?.required" class="alert">
-            Message is required.
+            Du musst eine Nachricht eingeben
           </p>
         </div>
       </div>
@@ -101,7 +107,7 @@
             d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"
           />
         </svg>
-        <p>Submit</p>
+        <p>Senden</p>
       </button>
     </form>
     <div
@@ -128,10 +134,11 @@
         style="width: 150px; height: 150px"
         autoplay
       ></lottie-player>
-      <p>Ooops something went wrong!</p>
+      <p>Ups, etwas ist schief gegangen!</p>
       <p>
-        Please try again. If this keeps happening please contact me via the
-        email provided below.
+        Versuche es bitte erneut. Falls das Problem weiterhin besteht,
+        kontaktiere mich bitte über die am Seitenende stehende
+        E-Mail-Adresse/Telefonnummer.
       </p>
       <button class="button retry-button" (click)="onClickRetryButton()">
         <svg
@@ -158,8 +165,8 @@
         style="width: 150px; height: 150px"
         autoplay
       ></lottie-player>
-      <p>Thank you!</p>
-      <p>I will get in touch with you shortly.</p>
+      <p>Vielen Dank!</p>
+      <p>Ich schreibe dir in Kürze zurück.</p>
     </div>
   </div>
 </section>

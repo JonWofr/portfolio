@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { IntersectionObserverDirective } from './directives/intersection-observer/intersection-observer.directive';
 import { FadeInDirective } from './directives/fade-in/fade-in.directive';
+import { WordCountPipe } from './pipes/word-count/word-count.pipe';
 
 @NgModule({
   // Necessary for the usage of custom HTML elements (e.g. lottie-files) (which are not angular elements)
@@ -53,6 +54,7 @@ import { FadeInDirective } from './directives/fade-in/fade-in.directive';
     FooterComponent,
     IntersectionObserverDirective,
     FadeInDirective,
+    WordCountPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

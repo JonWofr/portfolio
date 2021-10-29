@@ -28,6 +28,21 @@ div.card {
   }
 }
 
-img.card-image {
+div.image-container {
   border: 3px solid $accent-color;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 0.25rem;
+  padding: 20px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  white-space: pre-line;
 }

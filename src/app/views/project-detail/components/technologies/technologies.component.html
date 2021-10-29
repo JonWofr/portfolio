@@ -1,5 +1,8 @@
 <section class="section container">
-  <h2 class="section-heading">Technologies</h2>
+  <h2 class="section-heading">Technologien</h2>
+  <p class="section-paragraph">
+    Wesentliche Technologien, die ich innerhalb des Projekts verwendet habe.
+  </p>
   <div class="technologies-container">
     <div
       *ngFor="let technology of technologies"
@@ -11,6 +14,7 @@
         technology.accentColor +
         '99)'
       "
+      [title]="technology.name"
     >
       <img [src]="technology.iconUrl" alt="" />
     </div>

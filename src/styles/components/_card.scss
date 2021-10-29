@@ -25,15 +25,7 @@ div.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-img.card-image {
-  display: block;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 0.25rem;
-  object-fit: cover;
+  height: 100%;
 }
 
 h3.card-heading {

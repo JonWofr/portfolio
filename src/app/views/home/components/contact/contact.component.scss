@@ -1,11 +1,6 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
-:host {
-  display: block;
-  background-color: $secondary-background-color-light;
-}
-
 div.form-container {
   position: relative;
 }
@@ -29,7 +24,7 @@ div.name-and-email-container {
 
 div.formgroup {
   display: flex;
-  background-color: $primary-background-color-light;
+  background-color: $secondary-background-color-light;
 }
 
 div.alerts-container {
@@ -67,10 +62,13 @@ input {
   border: 1px solid $success-color;
 }
 
+div.textarea-container {
+  margin-bottom: 1.25rem;
+}
+
 textarea {
   width: 100%;
   resize: none;
-  margin-bottom: 1.25rem;
 }
 
 input,
@@ -81,6 +79,7 @@ textarea {
   transition-duration: 0.125s;
   transition-timing-function: ease-in-out;
   line-height: 1rem;
+  background-color: $secondary-background-color-light;
 }
 
 input:focus,

@@ -7,7 +7,7 @@
     {{ project?.title }}
   </h3>
   <p class="subsection-paragraph">
-    {{ project?.teaser }}
+    {{ project ? (project.shortDescription | wordCount: 10) : undefined }}
   </p>
   <p class="more-label">mehr</p>
 </a>

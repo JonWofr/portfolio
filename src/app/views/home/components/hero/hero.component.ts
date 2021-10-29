@@ -28,14 +28,7 @@ export class HeroComponent implements OnInit {
       this.containerBackgroundPositionY = 0.8 * window.scrollY;
     });
 
-    this.typeWords(
-      ['Web-Entwickler', 'Data-Scientist'],
-      70,
-      30,
-      700,
-      1200,
-      500
-    );
+    this.typeWords(['Frontend', 'Backend'], 70, 30, 700, 1200, 500);
   }
 
   async typeWords(
