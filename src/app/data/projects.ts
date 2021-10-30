@@ -44,9 +44,9 @@ export const projects: Project[] = [
     result:
       'Mit Hilfe der Library React überarbeitete ich gemäß der Designvorlage bereits bestehende Screens, erstellte neue und machte Anpassungen für Mobile- und Tablet-Layouts. Zusätzlich band ich das Backend an für die Darstellung der echten Daten.',
     slideshowImagesUrls: [
-      '/assets/images/projects/dein-geschenkgutschein/dein-geschenkgutschein-screen-1.png',
-      '/assets/images/projects/dein-geschenkgutschein/dein-geschenkgutschein-screen-2.png',
-      '/assets/images/projects/dein-geschenkgutschein/dein-geschenkgutschein-screen-3.png',
+      '/assets/images/projects/dein-geschenkgutschein/dein-geschenkgutschein-screen-1-1080p.png',
+      '/assets/images/projects/dein-geschenkgutschein/dein-geschenkgutschein-screen-2-1200p.png',
+      '/assets/images/projects/dein-geschenkgutschein/dein-geschenkgutschein-screen-3-1200p.png',
       '/assets/images/projects/dein-geschenkgutschein/dein-geschenkgutschein-screen-4.png',
       '/assets/images/projects/dein-geschenkgutschein/dein-geschenkgutschein-screen-5.png',
       '/assets/images/projects/dein-geschenkgutschein/dein-geschenkgutschein-screen-6.png',
@@ -99,11 +99,11 @@ export const projects: Project[] = [
     result:
       'Ich habe ein PyTorch Machine-Learning-Modell so optimiert, das es einen beliebigen Style auf ein beliebiges Bild übertragen kann. Für die Inferenz des trainierten Modells habe ich einen Flask-Server in Python aufgesetzt. Zusätzlich erstellte ich das Backend der Web-Applikation mit Hilfe von Firebase. Das Firebase-Backend diente dabei als Vermittler zwischen Frontend und Machine-Learning-Modell. Zuletzt half ich auch noch im Angular-Frontend aus.',
     slideshowImagesUrls: [
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-1.png',
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-2.png',
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-3.png',
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-4.png',
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-5.png',
+      '/assets/images/projects/paintable-paws/paintable-paws-screen-1-1200p.png',
+      '/assets/images/projects/paintable-paws/paintable-paws-screen-2-1200p.png',
+      '/assets/images/projects/paintable-paws/paintable-paws-screen-3-1200p.png',
+      '/assets/images/projects/paintable-paws/paintable-paws-screen-4-1200p.png',
+      '/assets/images/projects/paintable-paws/paintable-paws-screen-5-1200p.png',
     ],
     technologyNames: [
       TechnologyName.HTML,
