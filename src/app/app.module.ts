@@ -8,7 +8,7 @@ import { HomeComponent } from './views/home/home.component';
 import { HeroComponent } from './views/home/components/hero/hero.component';
 import { HeaderMobileComponent } from './components/header-mobile/header-mobile.component';
 import { HeaderDesktopComponent } from './components/header-desktop/header-desktop.component';
-import { MediaDirective } from './directives/media.directive';
+import { MediaDirective } from './directives/media/media.directive';
 import { AboutComponent } from './views/home/components/about/about.component';
 import { MyServicesCardComponent } from './views/home/components/my-services-card/my-services-card.component';
 import { MyServicesComponent } from './views/home/components/my-services/my-services.component';
