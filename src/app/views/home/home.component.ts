@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { HeaderBackgroundColor } from 'src/app/enums/header-background-color.enum';
 import { SectionId } from 'src/app/enums/section-id.enum';
 
@@ -52,9 +53,11 @@ export class HomeComponent implements OnInit {
   ];
   activeSectionId?: SectionId;
 
-  constructor() {}
+  constructor(private title: Title) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.title.setTitle('Jonas Wolfram');
+  }
 
   onSetHeaderBackgroundColor(headerBackgroundColor: HeaderBackgroundColor) {
     this.headerBackgroundColor = headerBackgroundColor;

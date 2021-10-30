@@ -1,10 +1,10 @@
 @import "abstracts/variables";
 
-div.header-top-row.white svg {
+div.header-top-row.white svg.burger-menu-icon {
   fill: $secondary-font-color-dark;
 }
 
-div.header-top-row.transparent svg {
+div.header-top-row.transparent svg.burger-menu-icon {
   fill: $primary-font-color-light;
 }
 
@@ -13,7 +13,7 @@ button {
   border: none;
 }
 
-svg {
+svg.burger-menu-icon {
   display: block;
   width: 2rem;
   height: 2rem;
@@ -45,12 +45,12 @@ li:last-child a {
   padding-bottom: 0.5rem;
 }
 
-a {
+li a {
   display: block;
   padding: 0.25rem 0;
 }
 
-a p {
+li a p {
   display: inline-block;
   margin: 0 auto;
   text-transform: uppercase;
@@ -73,8 +73,8 @@ a p {
   }
 }
 
-a.active p,
-a:hover p {
+li a.active p,
+li a:hover p {
   &::after {
     width: 100%;
   }

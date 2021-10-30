@@ -28,22 +28,16 @@ div.header-top-row div.container {
   justify-content: space-between;
 }
 
-div.header-top-row p {
-  font-size: 1.25rem;
-  line-height: 2rem;
-  transition: color 0.375s ease-in-out;
+div.header-top-row svg.portfolio-logo {
+  display: block;
+  height: 2rem;
+  width: auto;
 }
 
 div.header-top-row.white {
   background-color: $primary-font-color-light;
 }
-div.header-top-row.white p {
-  color: $secondary-font-color-dark;
-}
 
 div.header-top-row.transparent {
   background-color: transparent;
-}
-div.header-top-row.transparent p {
-  color: $primary-font-color-light;
 }
