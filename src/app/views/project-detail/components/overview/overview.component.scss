@@ -23,6 +23,9 @@ div.image-container {
 div.cinema-image-container {
   border-radius: 12px;
   cursor: grab;
+  // Necessary so that swiper slides do not hover on top of the parent element itself which renders the border-radius useless
+  position: relative;
+  z-index: 1;
 }
 
 div.cinema-image-container:active {
