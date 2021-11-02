@@ -5,23 +5,22 @@
     </p>
     <div class="cinema-image-container image-container">
       <div class="padding-top-hack-outer-container">
-        <div class="padding-top-hack-inner-container">
+        <div
+          class="padding-top-hack-inner-container"
+          [style.background]="
+            'radial-gradient(' +
+            project?.accentColor +
+            'dd, ' +
+            project?.accentColor +
+            'ff)'
+          "
+        >
           <div class="swiper">
             <div class="swiper-wrapper">
               <div
                 *ngFor="let slideshowImageUrl of project?.slideshowImagesUrls"
                 class="swiper-slide"
               >
-                <div
-                  class="slideshow-background-image"
-                  [style.background]="
-                    'radial-gradient(' +
-                    project?.accentColor +
-                    'dd, ' +
-                    project?.accentColor +
-                    'ff)'
-                  "
-                ></div>
                 <img class="slideshow-image" [src]="slideshowImageUrl" alt="" />
               </div>
             </div>
@@ -40,17 +39,16 @@
     >
       <button (click)="onClickPreviewImage(i)">
         <div class="padding-top-hack-outer-container">
-          <div class="padding-top-hack-inner-container">
-            <div
-              class="slideshow-background-image"
-              [style.background]="
-                'radial-gradient(' +
-                project?.accentColor +
-                'dd, ' +
-                project?.accentColor +
-                'ff)'
-              "
-            ></div>
+          <div
+            class="padding-top-hack-inner-container"
+            [style.background]="
+              'radial-gradient(' +
+              project?.accentColor +
+              'dd, ' +
+              project?.accentColor +
+              'ff)'
+            "
+          >
             <img class="slideshow-image" [src]="slideshowImageUrl" alt="" />
           </div>
           <div
