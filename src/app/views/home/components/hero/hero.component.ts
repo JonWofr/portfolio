@@ -17,6 +17,8 @@ export class HeroComponent implements OnInit {
     threshold: 1.0,
   };
   isContactButtonIntersecting?: boolean;
+  contactButtonAnimationQueue: boolean[] = [];
+  isContactButtonAnimationRunning = false;
 
   @Output() setHeaderBackgroundColor =
     new EventEmitter<HeaderBackgroundColor>();
@@ -99,6 +101,40 @@ export class HeroComponent implements OnInit {
   }
 
   onContactButtonIntersectionChange(isIntersecting: boolean): void {
+    if (this.isContactButtonIntersecting === undefined) {
+      this.isContactButtonIntersecting = isIntersecting;
+      return;
+    }
+
+    this.handleContactButtonAnimation(isIntersecting);
+  }
+
+  handleContactButtonAnimation(isIntersecting: boolean) {
+    if (!this.isContactButtonAnimationRunning) {
+      this.startContactButtonAnimation(isIntersecting);
+      // Set to the total amount of the CSS transition-duration plus a buffer of 50ms
+      this.setTimeoutPromise(550).then(
+        this.stopContactButtonAnimation.bind(this)
+      );
+    } else {
+      this.contactButtonAnimationQueue.push(isIntersecting);
+    }
+  }
+
+  startContactButtonAnimation(isIntersecting: boolean) {
     this.isContactButtonIntersecting = isIntersecting;
+    this.isContactButtonAnimationRunning = true;
+  }
+
+  stopContactButtonAnimation() {
+    this.isContactButtonAnimationRunning = false;
+    if (this.contactButtonAnimationQueue.length > 0) {
+      const isIntersecting =
+        this.contactButtonAnimationQueue[
+          this.contactButtonAnimationQueue.length - 1
+        ];
+      this.contactButtonAnimationQueue = [];
+      this.handleContactButtonAnimation(isIntersecting);
+    }
   }
 }
