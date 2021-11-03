@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'projects/:id',
     component: ProjectDetailComponent,
   },
+  {
+    path: '**',
+    redirectTo: '/',
+  },
 ];
 
 @NgModule({
