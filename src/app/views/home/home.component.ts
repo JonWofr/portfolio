@@ -93,7 +93,7 @@ export class HomeComponent implements OnInit {
     // a split second until all handlers triggered and the right one is set.
     if (!activeSection) return;
     if (activeSection.id !== this.activeSectionId) {
-      this.activeSectionId = activeSection?.id;
+      this.activeSectionId = activeSection.id;
     }
   }
 }
