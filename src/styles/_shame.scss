@@ -12,7 +12,6 @@ p.project-type {
 :root {
   --default-section-padding-top: 2.5rem;
   --default-section-padding-bottom: 3.5rem;
-  scroll-behavior: smooth;
 }
 
 @include media-breakpoint-up("md") {

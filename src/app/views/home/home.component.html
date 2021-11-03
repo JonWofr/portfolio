@@ -11,36 +11,43 @@
 <main>
   <app-hero
     (setHeaderBackgroundColor)="onSetHeaderBackgroundColor($event)"
+    [id]="sections[0].id"
+    class="anchor-element"
     appIntersectionObserver
     [options]="intersectionObserverOptions"
     (intersectionChange)="onIntersectionChange(sections[0].id, $event)"
   ></app-hero>
   <app-about
     [id]="sections[1].id"
+    class="anchor-element"
     appIntersectionObserver
     [options]="intersectionObserverOptions"
     (intersectionChange)="onIntersectionChange(sections[1].id, $event)"
   ></app-about>
   <app-my-services
     [id]="sections[2].id"
+    class="anchor-element"
     appIntersectionObserver
     [options]="intersectionObserverOptions"
     (intersectionChange)="onIntersectionChange(sections[2].id, $event)"
   ></app-my-services>
   <app-projects
     [id]="sections[3].id"
+    class="anchor-element"
     appIntersectionObserver
     [options]="intersectionObserverOptions"
     (intersectionChange)="onIntersectionChange(sections[3].id, $event)"
   ></app-projects>
   <app-resume
     [id]="sections[4].id"
+    class="anchor-element"
     appIntersectionObserver
     [options]="intersectionObserverOptions"
     (intersectionChange)="onIntersectionChange(sections[4].id, $event)"
   ></app-resume>
   <app-contact
     [id]="sections[5].id"
+    class="anchor-element"
     appIntersectionObserver
     [options]="intersectionObserverOptions"
     (intersectionChange)="onIntersectionChange(sections[5].id, $event)"

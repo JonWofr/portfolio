@@ -7,7 +7,7 @@
     <div class="container">
       <a
         routerLink="/"
-        [skipLocationChange]="true"
+        [fragment]="SectionId.HOME"
         (click)="shouldShowMenu ? toggleMenu() : undefined"
       >
         <svg
@@ -100,7 +100,7 @@
     <li>
       <a
         routerLink="/"
-        [skipLocationChange]="true"
+        [fragment]="SectionId.HOME"
         [class.active]="activeSectionId === SectionId.HOME"
         (click)="toggleMenu()"
       >
@@ -111,7 +111,6 @@
       <a
         routerLink="/"
         [fragment]="SectionId.ABOUT"
-        [skipLocationChange]="true"
         [class.active]="activeSectionId === SectionId.ABOUT"
         (click)="toggleMenu()"
         ><p>Über mich</p></a
@@ -121,7 +120,6 @@
       <a
         routerLink="/"
         [fragment]="SectionId.MY_SERVICES"
-        [skipLocationChange]="true"
         [class.active]="activeSectionId === SectionId.MY_SERVICES"
         (click)="toggleMenu()"
         ><p>Leistungen</p></a
@@ -131,7 +129,6 @@
       <a
         routerLink="/"
         [fragment]="SectionId.PROJECTS"
-        [skipLocationChange]="true"
         [class.active]="activeSectionId === SectionId.PROJECTS"
         (click)="toggleMenu()"
         ><p>Portfolio</p></a
@@ -141,7 +138,6 @@
       <a
         routerLink="/"
         [fragment]="SectionId.RESUME"
-        [skipLocationChange]="true"
         [class.active]="activeSectionId === SectionId.RESUME"
         (click)="toggleMenu()"
         ><p>Lebenslauf</p></a
@@ -151,7 +147,6 @@
       <a
         routerLink="/"
         [fragment]="SectionId.CONTACT"
-        [skipLocationChange]="true"
         [class.active]="activeSectionId === SectionId.CONTACT"
         (click)="toggleMenu()"
         ><p>Kontakt</p></a

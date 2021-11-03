@@ -5,7 +5,7 @@
 >
   <div class="header-top-row" [ngClass]="headerBackgroundColor">
     <div class="container">
-      <a routerLink="/" [skipLocationChange]="true">
+      <a routerLink="/" [fragment]="SectionId.HOME">
         <svg
           class="portfolio-logo"
           width="100%"
@@ -55,7 +55,7 @@
         <li>
           <a
             routerLink="/"
-            [skipLocationChange]="true"
+            [fragment]="SectionId.HOME"
             [class.active]="activeSectionId === SectionId.HOME"
             >Home</a
           >
@@ -64,7 +64,6 @@
           <a
             routerLink="/"
             [fragment]="SectionId.ABOUT"
-            [skipLocationChange]="true"
             [class.active]="activeSectionId === SectionId.ABOUT"
             >Über mich</a
           >
@@ -73,7 +72,6 @@
           <a
             routerLink="/"
             [fragment]="SectionId.MY_SERVICES"
-            [skipLocationChange]="true"
             [class.active]="activeSectionId === SectionId.MY_SERVICES"
             >Leistungen</a
           >
@@ -82,7 +80,6 @@
           <a
             routerLink="/"
             [fragment]="SectionId.PROJECTS"
-            [skipLocationChange]="true"
             [class.active]="activeSectionId === SectionId.PROJECTS"
             >Portfolio</a
           >
@@ -91,7 +88,6 @@
           <a
             routerLink="/"
             [fragment]="SectionId.RESUME"
-            [skipLocationChange]="true"
             [class.active]="activeSectionId === SectionId.RESUME"
             >Lebenslauf</a
           >
@@ -100,7 +96,6 @@
           <a
             routerLink="/"
             [fragment]="SectionId.CONTACT"
-            [skipLocationChange]="true"
             [class.active]="activeSectionId === SectionId.CONTACT"
             >Kontakt</a
           >
