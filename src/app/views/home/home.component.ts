@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
     this.headerBackgroundColor = headerBackgroundColor;
   }
 
-  onIntersectionChange(sectionId: string, isIntersecting: boolean): void {
+  onIntersectionChange(sectionId: SectionId, isIntersecting: boolean): void {
     const intersectingSection = this.sections.find(
       (section) => section.id === sectionId
     )!;
@@ -87,9 +87,13 @@ export class HomeComponent implements OnInit {
   setActiveSectionId(): void {
     const activeSection = this.sections.find(
       (section) => section.isIntersecting
-    )!;
+    );
+    // It's possible that there is no active section at a specific time. This is because the intersection observer
+    // event handlers trigger in random order. This also means that there could be a "wrong" active section for
+    // a split second until all handlers triggered and the right one is set.
+    if (!activeSection) return;
     if (activeSection.id !== this.activeSectionId) {
-      this.activeSectionId = activeSection.id;
+      this.activeSectionId = activeSection?.id;
     }
   }
 }
