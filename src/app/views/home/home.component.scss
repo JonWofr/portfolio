@@ -1,3 +1,5 @@
 .anchor-element {
   scroll-margin-top: 63px;
+  // Anchor scrolling is not properly working without the element being display: block
+  display: block;
 }
