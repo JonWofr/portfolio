@@ -1,5 +1,7 @@
 .anchor-element {
-  scroll-margin-top: 63px;
+  // For correct active section recognition the scroll-margin-top is less than the actual margin-top of all intersection-observers.
+  // By that there is a little buffer for incorrect scroll-restoration etc.
+  scroll-margin-top: 60px;
   // Anchor scrolling is not properly working without the element being display: block
   display: block;
 }

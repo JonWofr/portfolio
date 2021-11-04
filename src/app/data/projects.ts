@@ -71,7 +71,7 @@ export const projects: Project[] = [
       'Agile Toolbox dient als Informationsplattform für Methoden der agilen Produktentwicklung. Nutzer der Plattform können die für ihr aktuelles Projekt nützlichen Methoden ihrer “Toolbox” hinzufügen, wodurch sie diese und deren Funktionsweisen stets im Blick behalten.',
     task: 'Auf Basis einer Designvorlage sollte ich das Frontend der Applikation programmieren und die Datenbank anbinden.',
     result:
-      'Ich programmierte die Seite von Grund auf mit Hilfe der Library React und stellte die Brücke zur Datenbank bereit.',
+      'Von Grund auf programmierte ich die Seite mit Hilfe der Library React und stellte die Brücke zur Datenbank bereit.',
     slideshowImagesUrls: [
       '/assets/images/projects/agile-toolbox/agile-toolbox-screen-1.png',
       '/assets/images/projects/agile-toolbox/agile-toolbox-screen-2.png',
