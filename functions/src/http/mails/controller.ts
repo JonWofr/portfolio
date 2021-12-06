@@ -37,7 +37,7 @@ export const sendMail = async (req: express.Request, res: express.Response) => {
 
     const info = await transporter.sendMail({
       from: '"Jonas Wolfram" <no-reply@jonas-wolfram.de>',
-      to: 'hallo@jonas-wolfram.de',
+      to: 'kontakt@jonas-wolfram.de',
       subject: 'Neue Jobanfrage',
       text: emailBody,
       html: emailBody,
