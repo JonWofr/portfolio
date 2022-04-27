@@ -65,7 +65,7 @@
             routerLink="/"
             [fragment]="SectionId.ABOUT"
             [class.active]="activeSectionId === SectionId.ABOUT"
-            >Über mich</a
+            >About</a
           >
         </li>
         <li>
@@ -73,23 +73,18 @@
             routerLink="/"
             [fragment]="SectionId.MY_SERVICES"
             [class.active]="activeSectionId === SectionId.MY_SERVICES"
-            >Leistungen</a
+            >Services</a
           >
         </li>
         <li>
           <a
             routerLink="/"
             [fragment]="SectionId.PROJECTS"
-            [class.active]="activeSectionId === SectionId.PROJECTS"
+            [class.active]="
+              activeSectionId === SectionId.PROJECTS ||
+              activeSectionId === SectionId.RESUME
+            "
             >Portfolio</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/"
-            [fragment]="SectionId.RESUME"
-            [class.active]="activeSectionId === SectionId.RESUME"
-            >Lebenslauf</a
           >
         </li>
         <li>
@@ -97,7 +92,7 @@
             routerLink="/"
             [fragment]="SectionId.CONTACT"
             [class.active]="activeSectionId === SectionId.CONTACT"
-            >Kontakt</a
+            >Contact</a
           >
         </li>
       </ul>

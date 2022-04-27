@@ -3,20 +3,20 @@ import { MyService } from '../models/my-service.model';
 export const myServices: MyService[] = [
   {
     iconUrl: '/assets/icons/client-icon.svg',
-    title: 'Frontend-Entwicklung',
+    title: 'Frontend development',
     description:
-      'Mit Hilfe aktueller Web-Frameworks kann ich aus einer Designvorlage eine schicke und funktionelle Website bauen.',
+      'I create stunning GUIs based on design mockups with the help of modern frontend frameworks/libraries .',
   },
   {
-    iconUrl: '/assets/icons/server-icon.svg',
-    title: 'Backend-Entwicklung',
+    iconUrl: '/assets/icons/blockchain-icon.svg',
+    title: 'Web3\ndevelopment',
     description:
-      'Datenmanagement, Authentifizierungs- oder Payment-Lösungen: Ich übernehm’s!',
+      'In order for an app to become a dApp it needs to communicate with the blockchain. I can take care of that!',
   },
   {
     iconUrl: '/assets/icons/deployment-icon.svg',
     title: 'Deployment',
     description:
-      'Ich führe den Umzug von der  Entwicklungs- zur Live-Umgebung durch.',
+      'I make the transition from development to live environment happen.',
   },
 ];

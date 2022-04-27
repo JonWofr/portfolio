@@ -1,9 +1,9 @@
 <section class="section container">
-  <h2 class="section-heading">Kontakt</h2>
+  <h2 class="section-heading">Contact</h2>
   <p class="section-paragraph">
-    Interesse oder Fragen? Dann kontaktiere mich bitte entweder über das hier
-    bereitgestellte Kontaktformular oder über die am Seitenende stehende
-    E-Mail-Adresse/Telefonnummer.
+    Did I spark your interest or do you have any questions? Please contact me
+    either via the form down below or via the email or phone number provided at
+    the bottom of the page.
   </p>
   <div class="form-container">
     <form
@@ -38,7 +38,7 @@
           </div>
           <div *ngIf="name.invalid && name.touched" class="alerts-container">
             <p *ngIf="name.errors?.required" class="alert">
-              Du musst deinen Namen angeben
+              You have to enter your name
             </p>
           </div>
         </div>
@@ -69,10 +69,10 @@
           </div>
           <div *ngIf="email.invalid && email.touched" class="alerts-container">
             <p *ngIf="email.errors?.required" class="alert">
-              Du musst deine E-Mail-Adresse angeben
+              You have to enter your email address
             </p>
             <p *ngIf="email.errors?.email" class="alert">
-              Ungültige E-Mail-Adresse
+              Invalid email address
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@
           class="alerts-container"
         >
           <p *ngIf="message.errors?.required" class="alert">
-            Du musst eine Nachricht eingeben
+            You have to enter a message
           </p>
         </div>
       </div>
@@ -107,7 +107,7 @@
             d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"
           />
         </svg>
-        <p>Senden</p>
+        <p>Submit</p>
       </button>
     </form>
     <div
@@ -134,11 +134,10 @@
         style="width: 150px; height: 150px"
         autoplay
       ></lottie-player>
-      <p>Ups, etwas ist schief gegangen!</p>
+      <p>Oops, something went wrong!</p>
       <p>
-        Versuche es bitte erneut. Falls das Problem weiterhin besteht,
-        kontaktiere mich bitte über die am Seitenende stehende
-        E-Mail-Adresse/Telefonnummer.
+        Please try again. If the problem persists please contact me via the
+        email or phone number provided at the bottom of the page instead.
       </p>
       <button class="button retry-button" (click)="onClickRetryButton()">
         <svg
@@ -165,8 +164,8 @@
         style="width: 150px; height: 150px"
         autoplay
       ></lottie-player>
-      <p>Vielen Dank!</p>
-      <p>Ich schreibe dir in Kürze zurück.</p>
+      <p>Thank you!</p>
+      <p>Ich will respond to you shortly.</p>
     </div>
   </div>
 </section>
