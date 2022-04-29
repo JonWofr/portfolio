@@ -1,0 +1,63 @@
+<section class="section testimonials-section">
+  <div class="container">
+    <h2 class="section-heading">Testimonials</h2>
+    <div #slideshowContainer class="swiper" sharedFadeIn>
+      <div class="swiper-wrapper testimonials-section__testimonials-container">
+        <div
+          class="swiper-slide testimonials-section__testimonial-container"
+          *ngFor="let testimonial of testimonials"
+        >
+          <app-testimonial [testimonial]="testimonial"></app-testimonial>
+        </div>
+      </div>
+      <button
+        #arrowLeftButton
+        class="testimonials-section__navigation-button testimonials-section__navigation-button--left"
+        (click)="slideToPreviousSlide()"
+        [disabled]="activeSlideIndex === 0"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="testimonials-section__arrow-icon"
+        >
+          <path
+            fill="#E94D6D"
+            d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
+          />
+        </svg>
+      </button>
+      <button
+        #arrowRightButton
+        class="testimonials-section__navigation-button testimonials-section__navigation-button--right"
+        (click)="slideToNextSlide()"
+        [disabled]="activeSlideIndex === testimonials.length - 1"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="testimonials-section__arrow-icon"
+        >
+          <path
+            fill="#E94D6D"
+            d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
+          />
+        </svg>
+      </button>
+      <div class="testimonials-section__pagination-buttons-container">
+        <input
+          *ngFor="let testimonial of testimonials; let i = index"
+          class="testimonials-section__pagination-button"
+          type="radio"
+          name="pagination-button"
+          [checked]="i === activeSlideIndex"
+          (change)="onChangePaginationButton(i)"
+        />
+      </div>
+    </div>
+  </div>
+</section>
