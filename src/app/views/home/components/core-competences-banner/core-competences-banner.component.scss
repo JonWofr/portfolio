@@ -1,0 +1,16 @@
+.core-competences-banner {
+  background-image: radial-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    url("/assets/images/laptop-2.jpg");
+  background-position-y: 65%;
+}
+
+div.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  padding: 6rem 0;
+}

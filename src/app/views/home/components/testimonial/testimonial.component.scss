@@ -15,22 +15,22 @@ img {
 }
 
 p.subsection-paragraph {
-    quotes: "„" "“" "‚" "‘";
-    margin-bottom: 0.75rem;
-    max-width: 350px;
+  quotes: "„" "“" "‚" "‘";
+  margin-bottom: 0.75rem;
+  max-width: 350px;
 
-    &::before {
-      content: open-quote;
-    }
-    &::after {
-      content: close-quote;
+  &::before {
+    content: open-quote;
+  }
+  &::after {
+    content: close-quote;
   }
 }
 
-.project-type {
+p.project-type {
   color: #c4c4c4;
 }
 
-.subsection-heading {
-  margin-bottom: .125rem;
+h3.subsection-heading {
+  margin-bottom: 0.125rem;
 }

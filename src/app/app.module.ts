@@ -29,6 +29,7 @@ import { FadeInDirective } from './directives/fade-in/fade-in.directive';
 import { WordCountPipe } from './pipes/word-count/word-count.pipe';
 import { TestimonialsComponent } from './views/home/components/testimonials/testimonials.component';
 import { TestimonialComponent } from './views/home/components/testimonial/testimonial.component';
+import { CoreCompetencesBannerComponent } from './views/home/components/core-competences-banner/core-competences-banner.component';
 
 @NgModule({
   // Necessary for the usage of custom HTML elements (e.g. lottie-files) (which are not angular elements)
@@ -58,7 +59,8 @@ import { TestimonialComponent } from './views/home/components/testimonial/testim
     FadeInDirective,
     WordCountPipe,
     TestimonialsComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    CoreCompetencesBannerComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
