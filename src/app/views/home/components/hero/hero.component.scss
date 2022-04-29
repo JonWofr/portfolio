@@ -3,20 +3,10 @@
 
 div.background-container {
   height: 80vh;
-  background-image: url("/assets/images/laptop.jpg");
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("/assets/images/laptop.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
   position: relative;
-}
-
-div.overlay {
-  background-color: rgba($color: #000000, $alpha: 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 div.introduction-container {

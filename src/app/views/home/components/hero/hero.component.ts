@@ -7,7 +7,6 @@ import { HeaderBackgroundColor } from 'src/app/enums/header-background-color.enu
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
-  containerBackgroundPositionY = 0;
   typedWord = '';
   shouldShowCursor = true;
   intersectionObserverOptions: IntersectionObserverInit = {
@@ -26,11 +25,14 @@ export class HeroComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    window.addEventListener('scroll', () => {
-      this.containerBackgroundPositionY = 0.8 * window.scrollY;
-    });
-
-    this.typeWords(['frontend developer', 'web3 developer'], 70, 30, 700, 1200, 500);
+    this.typeWords(
+      ['frontend developer', 'web3 developer'],
+      70,
+      30,
+      700,
+      1200,
+      500
+    );
   }
 
   async typeWords(

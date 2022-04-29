@@ -6,6 +6,7 @@
         <div
           class="swiper-slide testimonials-section__testimonial-container"
           *ngFor="let testimonial of testimonials"
+          appFadeIn
         >
           <app-testimonial [testimonial]="testimonial"></app-testimonial>
         </div>
