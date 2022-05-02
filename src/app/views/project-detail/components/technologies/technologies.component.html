@@ -4,19 +4,10 @@
     Major technologies that I have used within the project.
   </p>
   <div class="technologies-container">
-    <div
+    <app-technology
       *ngFor="let technology of technologies"
-      class="technology-container"
-      [style.background]="
-        'linear-gradient(180deg, ' +
-        technology.accentColor +
-        '77, ' +
-        technology.accentColor +
-        '99)'
-      "
-      [title]="technology.name"
-    >
-      <img [src]="technology.iconUrl" alt="" />
-    </div>
+      [technology]="technology"
+      appFadeIn
+    ></app-technology>
   </div>
 </section>

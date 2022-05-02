@@ -1,0 +1,27 @@
+<div class="technology">
+  <div class="technology__icon-container">
+    <div
+      class="technology__icon-background"
+      [style.background]="
+        technology?.hasBackground
+          ? 'linear-gradient(' +
+            technology?.accentColor +
+            ', ' +
+            technology?.accentColor +
+            ')'
+          : 'radial-gradient(' +
+            technology?.accentColor +
+            '77, ' +
+            technology?.accentColor +
+            '99)'
+      "
+      [ngClass]="{
+        'technology__icon-background--with-filter': !technology?.hasBackground
+      }"
+    ></div>
+    <img class="technology__icon" [src]="technology?.iconUrl" alt="" />
+  </div>
+  <p class="technology__name">
+    {{ technology?.name }}
+  </p>
+</div>

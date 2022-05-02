@@ -4,4 +4,5 @@ export interface Technology {
   name: TechnologyName;
   iconUrl: string;
   accentColor: string;
+  hasBackground: boolean;
 }

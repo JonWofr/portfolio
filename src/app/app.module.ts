@@ -30,6 +30,7 @@ import { WordCountPipe } from './pipes/word-count/word-count.pipe';
 import { TestimonialsComponent } from './views/home/components/testimonials/testimonials.component';
 import { TestimonialComponent } from './views/home/components/testimonial/testimonial.component';
 import { CoreCompetencesBannerComponent } from './views/home/components/core-competences-banner/core-competences-banner.component';
+import { TechnologyComponent } from './views/project-detail/components/technology/technology.component';
 
 @NgModule({
   // Necessary for the usage of custom HTML elements (e.g. lottie-files) (which are not angular elements)
@@ -60,7 +61,8 @@ import { CoreCompetencesBannerComponent } from './views/home/components/core-com
     WordCountPipe,
     TestimonialsComponent,
     TestimonialComponent,
-    CoreCompetencesBannerComponent
+    CoreCompetencesBannerComponent,
+    TechnologyComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
