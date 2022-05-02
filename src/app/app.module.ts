@@ -31,6 +31,7 @@ import { TestimonialsComponent } from './views/home/components/testimonials/test
 import { TestimonialComponent } from './views/home/components/testimonial/testimonial.component';
 import { CoreCompetencesBannerComponent } from './views/home/components/core-competences-banner/core-competences-banner.component';
 import { TechnologyComponent } from './views/project-detail/components/technology/technology.component';
+import { ActionButtonsComponent } from './views/project-detail/components/action-buttons/action-buttons.component';
 
 @NgModule({
   // Necessary for the usage of custom HTML elements (e.g. lottie-files) (which are not angular elements)
@@ -62,7 +63,8 @@ import { TechnologyComponent } from './views/project-detail/components/technolog
     TestimonialsComponent,
     TestimonialComponent,
     CoreCompetencesBannerComponent,
-    TechnologyComponent
+    TechnologyComponent,
+    ActionButtonsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

@@ -33,6 +33,8 @@ export const projects: Project[] = [
     ],
     execution: '',
     accentColor: '#ffffff',
+    websiteUrl: 'https://artimon.web.app/',
+    codeUrl: 'https://github.com/JonWofr/artimon-frontend',
   },
   {
     id: 'thai-rin-ruam',
@@ -64,6 +66,8 @@ export const projects: Project[] = [
     ],
     execution: '',
     accentColor: '#ffffff',
+    websiteUrl: 'https://thairinruam.de/',
+    codeUrl: 'https://github.com/JonWofr/thai-rin-ruam',
   },
   {
     id: 'tomke-nils',
@@ -95,6 +99,8 @@ export const projects: Project[] = [
     ],
     execution: '',
     accentColor: '#ffffff',
+    websiteUrl: 'https://tomke-nils.de/',
+    codeUrl: 'https://github.com/JonWofr/tomke-portfolio',
   },
   {
     id: 'paintable-paws',

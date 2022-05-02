@@ -1,0 +1,38 @@
+@import "abstracts/variables";
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.button--inverted {
+  border: 1px solid $accent-color;
+  padding: calc(0.75em - 2px) calc(1.5em - 2px);
+  background-color: $primary-background-color-light;
+  transition: border-color 0.25s ease-in-out;
+
+  &:hover {
+    border-color: $accent-color-hover;
+    background-color: $primary-background-color-light !important;
+
+    path {
+      fill: $accent-color-hover;
+    }
+
+    & > p {
+      color: $accent-color-hover;
+    }
+  }
+
+  path {
+    transition: fill 0.25s ease-in-out;
+  }
+
+  & > p {
+    color: $accent-color;
+    transition: color 0.25s ease-in-out;
+  }
+}

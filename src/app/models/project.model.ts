@@ -13,4 +13,6 @@ export interface Project {
   technologyNames: TechnologyName[];
   execution: string;
   accentColor: string;
+  websiteUrl?: string;
+  codeUrl?: string;
 }

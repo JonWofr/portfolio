@@ -1,7 +1,8 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
-button:not(button:disabled):hover {
+button:not(button:disabled):hover,
+a:hover {
   cursor: pointer;
 }
 

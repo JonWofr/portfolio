@@ -90,4 +90,8 @@
   <p class="short-description">
     {{ project?.shortDescription }}
   </p>
+  <app-action-buttons
+    *ngIf="project?.websiteUrl || project?.codeUrl"
+    [project]="project"
+  ></app-action-buttons>
 </div>
