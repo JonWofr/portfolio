@@ -1,14 +1,18 @@
+@import "abstracts/mixins";
+
 .core-competences-banner {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url("/assets/images/laptop-2.jpg");
   background-size: cover;
   background-position-y: 70%;
+  background-position-x: center;
 }
 
-div.container {
+.core-competences-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6rem;
+  justify-content: space-between;
   padding: 6rem 0;
+  // SVGs are 64px wide and the max. spacing between them should not exceed 6rem
+  max-width: calc(64px * 3 + 6rem * 2);
+  margin: 0 auto;
 }

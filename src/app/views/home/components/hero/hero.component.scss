@@ -3,9 +3,11 @@
 
 div.background-container {
   height: 80vh;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url("/assets/images/laptop.jpg");
   background-size: cover;
+  background-position-x: 75%;
+  background-position-y: center;
   position: relative;
 }
 
