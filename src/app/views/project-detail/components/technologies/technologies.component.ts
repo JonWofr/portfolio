@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Project } from 'src/app/models/project.model';
-import { technologies } from 'src/app/data/technologies';
+import { technologies as allTechnologies } from 'src/app/data/technologies';
 import { Technology } from 'src/app/models/technology.model';
 
 @Component({
@@ -11,9 +11,14 @@ import { Technology } from 'src/app/models/technology.model';
 export class TechnologiesComponent implements OnInit {
   technologies: Technology[] = [];
   @Input() set project(project: Project | undefined) {
-    this.technologies = technologies.filter((technology) =>
-      project?.technologyNames.includes(technology.name)
-    );
+    const technologies: Technology[] = [];
+    project?.technologyNames.forEach((technologyName) => {
+      const technology = allTechnologies.find(
+        (technology) => technology.name === technologyName
+      );
+      if (technology) technologies.push(technology);
+    });
+    this.technologies = technologies;
   }
 
   constructor() {}
