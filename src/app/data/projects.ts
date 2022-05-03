@@ -26,6 +26,7 @@ export const projects: Project[] = [
       TechnologyName.TAILWINDCSS,
       TechnologyName.ETHERS,
       TechnologyName.META_MASK,
+      TechnologyName.IPFS,
       TechnologyName.TYPE_SCRIPT,
       TechnologyName.HTML,
       TechnologyName.CSS,

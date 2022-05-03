@@ -15,4 +15,5 @@ export enum TechnologyName {
   'ETHERS' = 'Ethers',
   'META_MASK' = 'MetaMask',
   'TAILWINDCSS' = 'tailwindcss',
+  'IPFS' = 'IPFS',
 }

@@ -98,4 +98,10 @@ export const technologies: Technology[] = [
     accentColor: '#37BCF8',
     hasBackground: false,
   },
+  {
+    name: TechnologyName.IPFS,
+    iconUrl: '/assets/logos/technologies/ipfs-logo.svg',
+    accentColor: '#469EA2',
+    hasBackground: false,
+  },
 ];
