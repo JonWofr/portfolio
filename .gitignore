@@ -46,3 +46,6 @@ Thumbs.db
 
 # Public files
 public
+
+# Firebase
+.firebase
