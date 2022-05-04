@@ -5,4 +5,5 @@ export interface Technology {
   iconUrl: string;
   accentColor: string;
   hasBackground: boolean;
+  website: string;
 }

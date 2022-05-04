@@ -35,7 +35,7 @@ export class TestimonialsComponent implements OnInit, AfterViewInit {
       Swiper.use([Autoplay]);
       this.swiper = new Swiper(this.slideshowContainer.nativeElement, {
         autoplay: {
-          delay: 5000,
+          delay: 7000,
         },
         grabCursor: true,
       });
