@@ -5,7 +5,7 @@ export const myServices: MyService[] = [
     iconUrl: '/assets/icons/client-icon.svg',
     title: 'Frontend development',
     description:
-      'I create stunning GUIs based on design mockups with the help of modern frontend frameworks/libraries .',
+      'I create stunning GUIs based on design mockups with the help of modern frontend frameworks/<wbr>libraries.',
   },
   {
     iconUrl: '/assets/icons/blockchain-icon.svg',
@@ -15,8 +15,8 @@ export const myServices: MyService[] = [
   },
   {
     iconUrl: '/assets/icons/deployment-icon.svg',
-    title: 'Deployment',
+    title: 'Website\nDeployment',
     description:
-      'I make the transition from development to live environment happen.',
+      'I can make your website accessible from anywhere around the world via your preferred domain name.',
   },
 ];
