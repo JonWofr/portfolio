@@ -47,7 +47,7 @@ export const projects: Project[] = [
       'The website is the digital presence of the renowned Thai restaurant Thai Rin Ruam based in Kevelaer, Germany.',
     task: 'The challenge was to renew their existing website. This primarily included a modern redesign, making the website responsive and the functionality to change the menu and the news section by Thai Rin Ruam themselves at any given time.',
     result:
-      'I created a web application with the help of Angular based on a design mockup. The website is divided into two compartments, one for users, one for admins. The former displays information like news, all available dishes, address information etc. The latter is used to provide the functionality for authenticated users to dynamically change dishes and news which enabled Thai Rin Ruam to make changes to the website themselves after project handover.',
+      'I created a web application with the help of Angular based on a design mockup. The website is divided into two spaces, one for users, one for admins. The former displays information like news, all available dishes, address information etc. The latter is used to provide the functionality for authenticated users to dynamically change dishes and news which enabled Thai Rin Ruam to make changes to the website themselves after project handover.',
     slideshowImagesUrls: [
       '/assets/images/projects/thai-rin-ruam/thai-rin-ruam-1.jpg',
       '/assets/images/projects/thai-rin-ruam/thai-rin-ruam-2.jpg',
@@ -78,9 +78,9 @@ export const projects: Project[] = [
       '/assets/images/projects/tomke-portfolio/tomke-portfolio-thumbnail.png',
     shortDescription:
       'The web application serves as a portfolio for the rising photo-, videographer, social media manager and influencer Tomke Nils.',
-    task: 'The challenge was to first come up with a modern and sleek design and then build a responsive website based on that that would display information regarding provided services, recent projects, a live instagram feed etc. After project handover it should be possible to change certain content by Tomke himself.',
+    task: 'The challenge was to first come up with a modern and sleek design and then build a responsive website that would display information regarding provided services, recent projects, a live Instagram feed etc. He also requested the functionality to make changes to certain content himself after project handover.',
     result:
-      'A responsive Angular application was created based on a design mockup which encompasses a user and an admin space. The user space shows static information like services, contact information etc. as well as dynamic information like projects and an instagram feed. The dynamic information are controlled via the admin space which is login-locked and provides an easy-to-use interface to create, edit and delete information by Tomke himself.',
+      'A responsive Angular application was created based on a design mockup which encompasses a user and an admin space. The user space shows static information like services, contact information etc. as well as dynamic information like projects and an Instagram feed. The dynamic information is controlled via the admin space which is login-locked and provides an easy-to-use interface to create, edit and delete information by Tomke himself.',
     slideshowImagesUrls: [
       '/assets/images/projects/tomke-portfolio/tomke-portfolio-1.jpg',
       '/assets/images/projects/tomke-portfolio/tomke-portfolio-2.jpg',
@@ -113,7 +113,7 @@ export const projects: Project[] = [
       'Paintable Paws allows you to turn photographs of pets into art using AI, with a variety of different art styles to choose from.',
     task: "The challenge was to optimise a machine learning model that can turn an arbitrary photo into an artwork with a user-defined style. A web application should then be built to enable users to upload a photograph of their pet and select their preferred style as well as submit their email so that they can receive the artwork once it's processed by the AI.",
     result:
-      'I optimised a machine learning model so that it can apply any style to any image. Furthermore I assisted in developing the frontend application in Angular and took care of the connection to the backend with the help of Firebase.',
+      'I optimised a machine learning model so that it could apply any style to any image. Furthermore I assisted in developing the frontend application in Angular and took care of the connection to the backend with the help of Firebase.',
     slideshowImagesUrls: [
       '/assets/images/projects/paintable-paws/paintable-paws-screen-1-1200p.png',
       '/assets/images/projects/paintable-paws/paintable-paws-screen-2-1200p.png',
