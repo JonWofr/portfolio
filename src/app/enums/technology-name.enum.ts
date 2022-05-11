@@ -12,7 +12,7 @@ export enum TechnologyName {
   'PYTHON' = 'Python',
   'TYPE_SCRIPT' = 'TypeScript',
   'PY_TORCH' = 'PyTorch',
-  'ETHERS' = 'Ethers',
+  'ETHERS' = 'ethers.js',
   'META_MASK' = 'MetaMask',
   'TAILWINDCSS' = 'tailwindcss',
   'IPFS' = 'IPFS',
