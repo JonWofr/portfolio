@@ -2,7 +2,7 @@ import { Job } from '../models/job.model';
 
 export const jobs: Job[] = [
   {
-    title: 'Mobile Media (B. Sc.)',
+    title: 'Computer Science (B. Sc.)',
     description:
       'Within the course of my studies I put an emphasis on web development and was already able to gain a lot of practical experience by completing numerous projects. I successfully finished my studies by graduating with honors (avg. 1.3).',
     startDate: '2017',
