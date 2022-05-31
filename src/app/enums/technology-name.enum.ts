@@ -16,4 +16,6 @@ export enum TechnologyName {
   'META_MASK' = 'MetaMask',
   'TAILWINDCSS' = 'tailwindcss',
   'IPFS' = 'IPFS',
+  'WAGMI' = 'wagmi',
+  'NEXT' = 'Next.js',
 }

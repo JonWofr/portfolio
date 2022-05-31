@@ -121,4 +121,18 @@ export const technologies: Technology[] = [
     hasBackground: false,
     website: 'https://ipfs.io/',
   },
+  {
+    name: TechnologyName.WAGMI,
+    iconUrl: '/assets/logos/technologies/wagmi-logo.svg',
+    accentColor: '#111111',
+    hasBackground: false,
+    website: 'https://wagmi.sh/',
+  },
+  {
+    name: TechnologyName.NEXT,
+    iconUrl: '/assets/logos/technologies/next-js-logo.svg',
+    accentColor: '#000000',
+    hasBackground: true,
+    website: 'https://nextjs.org/',
+  },
 ];

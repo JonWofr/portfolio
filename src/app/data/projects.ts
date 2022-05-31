@@ -4,9 +4,40 @@ import { TechnologyName } from '../enums/technology-name.enum';
 
 export const projects: Project[] = [
   {
+    id: 'deemo',
+    title: 'Deemo',
+    type: ProjectType.DAPP,
+    thumbnailImageUrl: '/assets/images/projects/deemo/deemo-thumbnail.png',
+    shortDescription:
+      'With Deemo you can mint audio memos like sounds, vocals, noises as NFTs on the Polygon blockchain.',
+    task: 'Deemo was built within a 3-day long weekend challenge. The challenge consisted of building a decentralised application from A-Z with a set of technologies like Next.js, tailwindcss, wagmi etc. that would use the Polygon blockchain within the specified timeframe.',
+    result:
+      'After coming up with the idea and creating a basic design mockup I built a dApp with Next.js that lets you select/record memos. A memo can then be minted on Polygon with the help of the wagmi library. The NFT data is stored on IPFS. All existing Deemos (decentralised memos) are shown and can be listened to on the website.',
+    slideshowImagesUrls: [
+      '/assets/images/projects/deemo/deemo-1.jpg',
+      '/assets/images/projects/deemo/deemo-2.jpg',
+      '/assets/images/projects/deemo/deemo-3.jpg',
+      '/assets/images/projects/deemo/deemo-4.jpg',
+    ],
+    technologyNames: [
+      TechnologyName.NEXT,
+      TechnologyName.REACT,
+      TechnologyName.TAILWINDCSS,
+      TechnologyName.ETHERS,
+      TechnologyName.WAGMI,
+      TechnologyName.IPFS,
+      TechnologyName.TYPE_SCRIPT,
+      TechnologyName.HTML,
+      TechnologyName.SASS,
+      TechnologyName.JAVA_SCRIPT,
+    ],
+    websiteUrl: 'https://deemo.vercel.app/',
+    codeUrl: 'https://github.com/JonWofr/deemo',
+  },
+  {
     id: 'artimon',
     title: 'Artimon',
-    type: ProjectType.RESPONSIVE,
+    type: ProjectType.DAPP,
     thumbnailImageUrl: '/assets/images/projects/artimon/artimon-thumbnail.png',
     shortDescription:
       'Artimon is a decentralised application that lets you generate unique monsters (Artimons) with the help of AI which can then be minted as NFTs.',
@@ -29,18 +60,16 @@ export const projects: Project[] = [
       TechnologyName.IPFS,
       TechnologyName.TYPE_SCRIPT,
       TechnologyName.HTML,
-      TechnologyName.CSS,
+      TechnologyName.SASS,
       TechnologyName.JAVA_SCRIPT,
     ],
-    execution: '',
-    accentColor: '#ffffff',
     websiteUrl: 'https://artimon.web.app/',
     codeUrl: 'https://github.com/JonWofr/artimon-frontend',
   },
   {
     id: 'thai-rin-ruam',
     title: 'Thai Rin Ruam',
-    type: ProjectType.RESPONSIVE,
+    type: ProjectType.WEB_APP,
     thumbnailImageUrl:
       '/assets/images/projects/thai-rin-ruam/thai-rin-ruam-thumbnail.png',
     shortDescription:
@@ -62,18 +91,15 @@ export const projects: Project[] = [
       TechnologyName.TYPE_SCRIPT,
       TechnologyName.FIREBASE,
       TechnologyName.HTML,
-      TechnologyName.CSS,
       TechnologyName.JAVA_SCRIPT,
     ],
-    execution: '',
-    accentColor: '#ffffff',
     websiteUrl: 'https://thairinruam.de/',
     codeUrl: 'https://github.com/JonWofr/thai-rin-ruam',
   },
   {
     id: 'tomke-nils',
     title: 'Tomke Nils',
-    type: ProjectType.RESPONSIVE,
+    type: ProjectType.WEB_APP,
     thumbnailImageUrl:
       '/assets/images/projects/tomke-portfolio/tomke-portfolio-thumbnail.png',
     shortDescription:
@@ -95,42 +121,9 @@ export const projects: Project[] = [
       TechnologyName.TYPE_SCRIPT,
       TechnologyName.FIREBASE,
       TechnologyName.HTML,
-      TechnologyName.CSS,
       TechnologyName.JAVA_SCRIPT,
     ],
-    execution: '',
-    accentColor: '#ffffff',
     websiteUrl: 'https://tomke-nils.de/',
     codeUrl: 'https://github.com/JonWofr/tomke-portfolio',
-  },
-  {
-    id: 'paintable-paws',
-    title: 'Paintable Paws',
-    type: ProjectType.MOBILE,
-    thumbnailImageUrl:
-      '/assets/images/projects/paintable-paws/paintable-paws-thumbnail.png',
-    shortDescription:
-      'Paintable Paws allows you to turn photographs of pets into art using AI, with a variety of different art styles to choose from.',
-    task: "The challenge was to optimise a machine learning model that can turn an arbitrary photo into an artwork with a user-defined style. A web application should then be built to enable users to upload a photograph of their pet and select their preferred style as well as submit their email so that they can receive the artwork once it's processed by the AI.",
-    result:
-      'I optimised a machine learning model so that it could apply any style to any image. Furthermore I assisted in developing the frontend application in Angular and took care of the connection to the backend with the help of Firebase.',
-    slideshowImagesUrls: [
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-1-1200p.png',
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-2-1200p.png',
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-3-1200p.png',
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-4-1200p.png',
-      '/assets/images/projects/paintable-paws/paintable-paws-screen-5-1200p.png',
-    ],
-    technologyNames: [
-      TechnologyName.ANGULAR,
-      TechnologyName.SASS,
-      TechnologyName.TYPE_SCRIPT,
-      TechnologyName.FIREBASE,
-      TechnologyName.HTML,
-      TechnologyName.CSS,
-      TechnologyName.JAVA_SCRIPT,
-    ],
-    execution: '',
-    accentColor: '#554A7D',
   },
 ];

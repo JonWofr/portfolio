@@ -11,8 +11,7 @@ export interface Project {
   result: string;
   slideshowImagesUrls: string[];
   technologyNames: TechnologyName[];
-  execution: string;
-  accentColor: string;
+  accentColor?: string;
   websiteUrl?: string;
   codeUrl?: string;
 }

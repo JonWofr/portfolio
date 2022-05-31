@@ -7,13 +7,15 @@
       <div class="padding-top-hack-outer-container">
         <div
           class="padding-top-hack-inner-container"
-          [style.background]="
-            'radial-gradient(' +
-            project?.accentColor +
-            'dd, ' +
-            project?.accentColor +
-            'ff)'
-          "
+          [ngStyle]="{
+            backgroundImage:
+              project?.accentColor &&
+              'radial-gradient(' +
+                project?.accentColor +
+                'dd, ' +
+                project?.accentColor +
+                'ff)'
+          }"
         >
           <div class="swiper">
             <div class="swiper-wrapper">

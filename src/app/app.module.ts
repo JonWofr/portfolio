@@ -20,7 +20,6 @@ import { ProjectDetailComponent } from './views/project-detail/project-detail.co
 import { ProblemSolutionComponent } from './views/project-detail/components/problem-solution/problem-solution.component';
 import { OverviewComponent } from './views/project-detail/components/overview/overview.component';
 import { TechnologiesComponent } from './views/project-detail/components/technologies/technologies.component';
-import { ExecutionComponent } from './views/project-detail/components/execution/execution.component';
 import { ContactComponent } from './views/home/components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
@@ -54,7 +53,6 @@ import { ActionButtonsComponent } from './views/project-detail/components/action
     ProblemSolutionComponent,
     OverviewComponent,
     TechnologiesComponent,
-    ExecutionComponent,
     ContactComponent,
     FooterComponent,
     IntersectionObserverDirective,
@@ -64,7 +62,7 @@ import { ActionButtonsComponent } from './views/project-detail/components/action
     TestimonialComponent,
     CoreCompetencesBannerComponent,
     TechnologyComponent,
-    ActionButtonsComponent
+    ActionButtonsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
