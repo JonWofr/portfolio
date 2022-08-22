@@ -2,24 +2,24 @@
 @import "abstracts/mixins.scss";
 
 div.background-container {
-  height: 80vh;
   background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url("/assets/images/laptop.jpg");
   background-size: cover;
   background-position-x: 75%;
   background-position-y: center;
-  position: relative;
+  padding-top: var(--default-section-padding-top);
+  padding-bottom: var(--default-section-padding-bottom);
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 div.introduction-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  top: calc(
-    50% - (10em + 2 * 0.6125em + 0.75em + 2em * 1.25 + 1.125em * 1.25 + 2em) / 2
-  );
-  width: 100%;
+  position: relative;
 }
 
 img {
@@ -36,7 +36,7 @@ div.text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 h1 {
@@ -117,7 +117,15 @@ a.button.fixed svg {
   font-size: 1.5em;
 }
 
+.social-media-links-container {
+  margin-bottom: 1.5em;
+}
+
 @include media-breakpoint-up("md") {
+  div.background-container {
+    min-height: 800px;
+  }
+
   div.introduction-container {
     font-size: calc(1rem * 1.1);
   }
@@ -134,5 +142,11 @@ a.button.fixed svg {
 
   a.button.fixed {
     font-size: 1.25rem;
+  }
+}
+
+@include media-breakpoint-up("xxxl") {
+  div.background-container {
+    min-height: 900px;
   }
 }

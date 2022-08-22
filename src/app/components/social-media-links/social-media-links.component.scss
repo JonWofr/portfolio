@@ -1,0 +1,40 @@
+@import "../../../styles/abstracts/variables";
+
+.social-media-links-container {
+  display: flex;
+  justify-content: center;
+  gap: 0 0.75rem;
+  align-items: flex-start;
+}
+
+.link {
+  transition: filter 0.25s ease-in-out;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.icon {
+  display: block;
+
+  &.small {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &.medium {
+    width: 2em;
+    height: 2em;
+  }
+}
+
+.path {
+  &.primary-light {
+    fill: $primary-font-color-light;
+  }
+
+  &.muted {
+    fill: hsl(0, 0%, 79%);
+  }
+}
