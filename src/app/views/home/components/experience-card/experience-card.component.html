@@ -4,15 +4,13 @@
     <p class="project-type">
       {{ job?.title }}
     </p>
-    <div class="heading-container">
-      <h3 class="subsection-heading">
-        {{ job?.employer?.name }}
-      </h3>
-      <p class="duration">
+    <h3 class="subsection-heading">
+      {{ job?.employer?.name }}
+      <span class="duration">
         {{ job?.startDate
         }}{{ job?.startDate !== job?.endDate ? "-" + job?.endDate : "" }}
-      </p>
-    </div>
+      </span>
+    </h3>
     <p class="subsection-paragraph">{{ job?.description }}</p>
   </div>
 </article>

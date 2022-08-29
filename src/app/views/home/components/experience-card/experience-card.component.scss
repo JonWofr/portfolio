@@ -21,23 +21,23 @@
   flex: 1;
 }
 
-.heading-container {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
 .duration {
   font-size: 0.75rem;
   line-height: 1.5;
   font-family: $secondary-font-light;
+  display: inline-block;
+  margin-left: 0.5rem;
 }
 
 .subsection-heading {
   margin-bottom: 0.25rem;
 }
 
-.project-type,
-.subsection-paragraph {
+.subsection-heading,
+.project-type {
   text-align: left;
+}
+
+.subsection-paragraph {
+  text-align: justify;
 }
