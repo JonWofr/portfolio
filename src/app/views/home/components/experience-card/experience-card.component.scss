@@ -1,0 +1,43 @@
+@import "abstracts/variables";
+
+.experience-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: block;
+  min-width: 0px;
+  min-height: 0px;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: $default-box-shadow;
+}
+
+.right-side-container {
+  flex: 1;
+}
+
+.heading-container {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.duration {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-family: $secondary-font-light;
+}
+
+.subsection-heading {
+  margin-bottom: 0.25rem;
+}
+
+.project-type,
+.subsection-paragraph {
+  text-align: left;
+}

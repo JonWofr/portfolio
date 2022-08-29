@@ -1,0 +1,18 @@
+<article class="experience-card">
+  <img [src]="job?.employer?.logoUrl" alt="" class="logo" />
+  <div class="right-side-container">
+    <p class="project-type">
+      {{ job?.title }}
+    </p>
+    <div class="heading-container">
+      <h3 class="subsection-heading">
+        {{ job?.employer?.name }}
+      </h3>
+      <p class="duration">
+        {{ job?.startDate
+        }}{{ job?.startDate !== job?.endDate ? "-" + job?.endDate : "" }}
+      </p>
+    </div>
+    <p class="subsection-paragraph">{{ job?.description }}</p>
+  </div>
+</article>
