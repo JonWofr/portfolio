@@ -8,7 +8,7 @@
       {{ job?.employer?.name }}
       <span class="duration">
         {{ job?.startDate
-        }}{{ job?.startDate !== job?.endDate ? "-" + job?.endDate : "" }}
+        }}{{ job?.startDate !== job?.endDate ? " — " + job?.endDate : "" }}
       </span>
     </h3>
     <p class="subsection-paragraph">{{ job?.description }}</p>
