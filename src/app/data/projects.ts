@@ -4,6 +4,38 @@ import { TechnologyName } from '../enums/technology-name.enum';
 
 export const projects: Project[] = [
   {
+    id: 'split-protocol',
+    title: 'Split Protocol',
+    type: ProjectType.DAPP,
+    thumbnailImageUrl:
+      '/assets/images/projects/split-protocol/split-protocol-thumbnail.png',
+    shortDescription:
+      'Our project submission for HackFS 2022, a hackathon organised by ETHGlobal, were we managed to win multiple prices.',
+    task: 'The challenge was to build a dApp from scratch within the Ethereum ecosystem and to present the results after 2 1/2 weeks in front of the judges of the hackathon.',
+    result:
+      'I took the lead in the project and came up with the idea of a dApp to manage shared expenses. I assembled an international team that was also excited about the idea and its realisation. After that I created the design, helped in the frontend development of a Next.js dApp and presented the MVP in front of the jury. We managed to win the hackathon and additionally received the second price from one of the sponsors, Polygon.',
+    slideshowImagesUrls: [
+      '/assets/images/projects/split-protocol/split-protocol-1.jpg',
+      '/assets/images/projects/split-protocol/split-protocol-2.jpg',
+      '/assets/images/projects/split-protocol/split-protocol-3.jpg',
+      '/assets/images/projects/split-protocol/split-protocol-4.jpg',
+      '/assets/images/projects/split-protocol/split-protocol-5.jpg',
+    ],
+    technologyNames: [
+      TechnologyName.NEXT,
+      TechnologyName.REACT,
+      TechnologyName.TAILWINDCSS,
+      TechnologyName.UNISWAP,
+      TechnologyName.ETHERS,
+      TechnologyName.WAGMI,
+      TechnologyName.TYPE_SCRIPT,
+      TechnologyName.HTML,
+      TechnologyName.JAVA_SCRIPT,
+    ],
+    websiteUrl: 'https://proud-moon-1292.on.fleek.co/',
+    codeUrl: 'https://github.com/yanghakim/Split-Protocol',
+  },
+  {
     id: 'deemo',
     title: 'Deemo',
     type: ProjectType.DAPP,
@@ -60,7 +92,6 @@ export const projects: Project[] = [
       TechnologyName.IPFS,
       TechnologyName.TYPE_SCRIPT,
       TechnologyName.HTML,
-      TechnologyName.SASS,
       TechnologyName.JAVA_SCRIPT,
     ],
     websiteUrl: 'https://artimon.web.app/',

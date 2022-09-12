@@ -135,4 +135,11 @@ export const technologies: Technology[] = [
     hasBackground: true,
     website: 'https://nextjs.org/',
   },
+  {
+    name: TechnologyName.UNISWAP,
+    iconUrl: '/assets/logos/technologies/uniswap-logo.svg',
+    accentColor: '#fc9cc7',
+    hasBackground: false,
+    website: 'https://uniswap.org/',
+  },
 ];

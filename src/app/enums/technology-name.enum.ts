@@ -18,4 +18,5 @@ export enum TechnologyName {
   'IPFS' = 'IPFS',
   'WAGMI' = 'wagmi',
   'NEXT' = 'Next.js',
+  'UNISWAP' = 'UniSwap',
 }

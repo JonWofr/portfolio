@@ -7,7 +7,7 @@ import { projects } from '../../../../data/projects';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-  projects = projects;
+  projects = projects.slice(0, 4);
 
   constructor() {}
 
