@@ -4,7 +4,7 @@ export const jobs: Job[] = [
   {
     title: 'Computer Science (B. Sc.)',
     description:
-      'Within the course of my studies I put an emphasis on web development and was already able to gain a lot of practical experience by completing numerous projects. I successfully finished my studies by graduating with honors (avg. 1.3).',
+      'Within the course of my studies I put an emphasis on web development and was already able to gain a lot of practical experience by completing numerous projects. I successfully finished my studies by graduating with honours (avg. 1.3).',
     startDate: '2017',
     endDate: '2021',
     employer: {
