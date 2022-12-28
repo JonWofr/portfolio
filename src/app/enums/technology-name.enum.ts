@@ -19,4 +19,5 @@ export enum TechnologyName {
   'WAGMI' = 'wagmi',
   'NEXT' = 'Next.js',
   'UNISWAP' = 'UniSwap',
+  'CONTENTFUL' = 'Contentful',
 }

@@ -142,4 +142,11 @@ export const technologies: Technology[] = [
     hasBackground: false,
     website: 'https://uniswap.org/',
   },
+  {
+    name: TechnologyName.CONTENTFUL,
+    iconUrl: '/assets/logos/technologies/contentful-logo.svg',
+    accentColor: '#67B3FF',
+    hasBackground: false,
+    website: 'https://www.contentful.com/',
+  },
 ];

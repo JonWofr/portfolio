@@ -4,6 +4,35 @@ import { TechnologyName } from '../enums/technology-name.enum';
 
 export const projects: Project[] = [
   {
+    id: 'sereact',
+    title: 'Sereact',
+    type: ProjectType.WEB_APP,
+    thumbnailImageUrl: '/assets/images/projects/sereact/sereact-thumbnail.png',
+    shortDescription:
+      'Sereact is a startup which uses AI and robotics to fundamentally change warehouse operations.',
+    task: 'Sereact approached me with the task of relaunching their business website. They wanted to have a modern, clean, responsive website which should not fear to use animations to make the website more lively. Additionally, they requested to be able to easily add/edit/delete new job postings and blog posts themselves.',
+    result:
+      'Within the course of ~3 weeks I built a Next.js app which used Tailwind CSS for the styling. In order to make future changes as easy as possible for Sereact I connected the headless CMS Contentful to the app. This enabled them to easily manage their content decoupled from the frontend. Lastly, Framer Motion has been used to bring the website to life with animations.',
+    slideshowImagesUrls: [
+      '/assets/images/projects/sereact/sereact-1.jpg',
+      '/assets/images/projects/sereact/sereact-2.jpg',
+      '/assets/images/projects/sereact/sereact-3.jpg',
+      '/assets/images/projects/sereact/sereact-4.jpg',
+      '/assets/images/projects/sereact/sereact-5.jpg',
+      '/assets/images/projects/sereact/sereact-6.jpg',
+    ],
+    technologyNames: [
+      TechnologyName.NEXT,
+      TechnologyName.REACT,
+      TechnologyName.TAILWINDCSS,
+      TechnologyName.TYPE_SCRIPT,
+      TechnologyName.HTML,
+      TechnologyName.JAVA_SCRIPT,
+      TechnologyName.CONTENTFUL,
+    ],
+    websiteUrl: 'https://sereact.ai',
+  },
+  {
     id: 'split-protocol',
     title: 'Split Protocol',
     type: ProjectType.DAPP,
