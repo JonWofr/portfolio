@@ -11,7 +11,7 @@ export const sendMail = async (req: express.Request, res: express.Response) => {
     }: { senderName: string; senderEmail: string; message: string } = req.body;
 
     const transporter = nodemailer.createTransport({
-      host: 'smtp.zoho.eu',
+      host: 'smtp.mail.me.com',
       port: 587,
       secure: false,
       auth: {
@@ -45,6 +45,7 @@ export const sendMail = async (req: express.Request, res: express.Response) => {
 
     res.status(200).send(info);
   } catch (err) {
+    console.error(err);
     res.status(500).send(err);
   }
 };
